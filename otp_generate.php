@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> VCE Queries </title>
+        <title> VCE Portal </title>
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/material.css">
@@ -16,11 +16,7 @@
             </div>
         </a>
         <ul id="nav-bar">
-            <a href="index.php"><li>Home</li></a>
-            <a href="categories.php"><li>Categories</li></a>
-            <a href="contacts.php"><li>Contact</li></a>
-            <a href="ask.php"><li>Ask Question</li></a>
-	    <a href="all.php"><li>All Posts</li></a>
+           
             <?php
                 if(! isset($_SESSION['user'])){
             ?>
@@ -42,7 +38,7 @@
             <div id="sf">
                 <center>
                     <div class="heading">
-                        <h1 class="logo"><div id="i">i</div><div id="cir">i</div><div id="ntro">VCE Queries</div></h1>
+                        <h1 class="logo"><div id="i">i</div><div id="cir">i</div><div id="ntro">VCE Portal</div></h1>
                         <p id="tag-line">ask clarify explore</p>
                     </div>
 
