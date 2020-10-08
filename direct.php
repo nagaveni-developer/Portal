@@ -69,21 +69,20 @@
             <h4>
                 <a id="title-head" href="categories.php">Categories</a>
             </h4>
-            <div id="box0">
-                <center>
-                    <a id="ada" href="#box1">
+            <center>
+                    <a  href="student.php">
                         <div id="algo" class="img">
                             <div id="p" title="Open">Examination Branch</div>
                         </div>
                     </a>
         
-	             <a id="db" href="#box2">
+	             <a id="db" href="">
                         <div id="database" class="img">
                             <div id="p" title="Open">Library Mangement</div>
                         </div>
                     </a>
 		    </center>
-            </div>
+           
 
          <!-- content -->
 
