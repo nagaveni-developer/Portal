@@ -408,21 +408,11 @@ input[type="password"]:hover{
 }
 
 #algo{
-    background: url(../images/cse.jpg);
-    background-size: 100%;
-}
-
-#archi{
-    background: url(../images/architecture.jpg);
-    background-size: 100%;
-}
-
-#toc{
-    background: url(electrical.jpg);
+    background: url(http://vce.ac.in/About/College/gallery/02.jpg);
     background-size: 100%;
 }
 #database{
-    background: url(../images/probability.jpg);
+    background: url(http://www.vce.ac.in/slides/Slide_03.jpg);
     background-size: 100%;
 }
 
