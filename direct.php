@@ -1,4 +1,9 @@
-
+<?php
+    session_start();
+    include("connect.php");
+    if(! isset($_SESSION['user']))
+        header("Location: index.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -49,20 +54,12 @@
         </a>
         <ul id="nav-bar">
           
-            <?php
-                if(! isset($_SESSION['user'])){
-            ?>
-            <a href="index.php"><li>Log In</li></a>
-            <a href="signup.php"><li id="home">Sign Up</li></a>
-            <?php
-                }
-                else{
-            ?>
+          
+  	    <a href="direct.php"><li id="home">Request</li></a>
+            
             <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
-            <a href="logout.php"><li>Log Out</li></a>
-            <?php
-                }
-            ?>
+            <a href="logout.php"><li>Log out</li></a>
+           
         </ul>
         <!-- content -->
         <div id="content">
