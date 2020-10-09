@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> VCE Queries </title>
+        <title> VCE Portal </title>
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/material.css">
