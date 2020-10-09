@@ -95,8 +95,8 @@
         <div id="content">
             <center>
                 <div class="heading">
-                    <h1 class="logo"><div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div></h1>
-                    <p id="tag-line">  Students <=> Examination Branch</p>
+                    <h2 id="trouble">Examination Branch<h2>
+                    
                 </div>
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
                     <div id="button-block">

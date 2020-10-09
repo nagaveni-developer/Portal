@@ -94,20 +94,15 @@
         <!-- content -->
         <div id="content">
             <center>
-                <div class="heading">
-                    <h1 class="logo"><div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div></h1>
-                    <p id="tag-line">  Students <=> Examination Branch</p>
-                </div>
                
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
                             <h2 style=" color: #63CFB6;">Choose the Document</h2><br>
                  
-                            <input type="radio" value="allotmentorder" id="renewal" >
-                            <label for="allotmentorder" >Allotment Order</label><br><br>
-                            <input type="radio" value="bonofied" >
-                            <label for="bonofied" >Bonofied</label><br><br>
                         <div id="button-block">   
-                            <div class="buttons"><a href=""><input name="submit" type="button" value="Request Document" class="up-in"></a></div>
+                            <div class="buttons"><input type="button" value="Allotment Order" id="renewal" class="up-in"><br><br></div>
+                            <div class="buttons"><input type="button" value="Bonofied" class="up-in"><br><br></div>
+                            <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>
+                    -->
                         </div>
                 </form>
             </center>

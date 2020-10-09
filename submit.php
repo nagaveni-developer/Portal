@@ -94,19 +94,15 @@
         <!-- content -->
         <div id="content">
             <center>
-                <div class="heading">
-                    <h1 class="logo"><div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div></h1>
-                    <p id="tag-line">  Students <=> Examination Branch</p>
-                </div>
-               
+            
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
+                     
                             <h2 style=" color: #63CFB6;">Choose the Document</h2><br>
-                            <input type="radio" value="renewal" id="renewal" >
-                            <label for="renewal" >Renewal</label><br><br>
-                            <input type="radio" value="lostmemo" >
-                            <label for="lostmemo" >Lost MEMO</label><br><br>
                         <div id="button-block">   
-                            <div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>
+                            <div class="buttons"><input type="button" value="Renewal" id="renewal" class="up-in"><br><br></div>
+                            <div class="buttons"><input type="button" value="Lost MEMO" class="up-in"><br><br></div>
+                            <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>
+                    -->
                         </div>
                 </form>
             </center>
