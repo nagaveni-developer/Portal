@@ -2,7 +2,7 @@
     session_start();
     include("connect.php");
     if(! isset($_SESSION['user']))
-        header("Location: index.php");
+       
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,7 +67,7 @@
                 <a id="title-head" href="categories.php">Categories</a>
             </h4>
             <center>
-                    <a  href="student.php">
+                    <a  href="submit.php">
                         <div id="algo" class="img">
                             <div id="p" title="Open">Examination Branch</div>
                         </div>
