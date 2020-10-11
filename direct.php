@@ -63,9 +63,7 @@
         </ul>
         <!-- content -->
         <div id="content">
-            <h4>
-                <a id="title-head" href="categories.php">Categories</a>
-            </h4>
+            
             <center>
                     <a  href="submit.php">
                         <div id="algo" class="img">
