@@ -37,12 +37,6 @@
                 height: 30px;
                 line-height: 30px;
             }
-            .pop{
-                display: none;
-                text-align: center;
-                margin: 195.5px auto;
-                font-size: 12px;
-            }
         </style>
     </head>
     <body id="_3">
