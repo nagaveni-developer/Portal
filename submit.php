@@ -90,8 +90,8 @@
             </div>
         </a>
         <ul id="nav-bar">
-            <a href="direct.php"><li>Request</li></a>
-            <a href="profile.php"><li id="home">Hi, <?php echo $_SESSION["user"]; ?></li></a>
+            <a href="direct.php"><li id="home">Request</li></a>
+            <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
             <a href="logout.php"><li>Log Out</li></a>
         </ul>
         <h2 style=" color: #63CFB6;">Choose the Document</h2><br>
@@ -108,7 +108,7 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <button type="submit" class="btn">Login</button>
+    <button type="submit" class="btn">Request</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
 </div>
