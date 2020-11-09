@@ -14,12 +14,7 @@
         <link rel="icon" href="images/icon1.png" >
         <link type="text/css" rel="stylesheet" href="fonts/font.css">
         <style>
-body{
-	margin:0;
-	padding: 0;
-	color:#444;
 
-}
 *,:after,:before{box-sizing:border-box}
 .pull-left{float:left}
 .pull-right{float:right}
@@ -41,7 +36,9 @@ body{
 	max-width:280px;
 	overflow:hidden;
 	border-radius:3px;
-	background:#B7AFA3;
+    color:white;
+	background:#4ca4b9;
+
 	box-shadow:0 17px 50px 0 rgba(0,0,0,.19),0 12px 15px 0 rgba(0,0,0,.24);
 }
 .accordion>a{
@@ -57,10 +54,10 @@ body{
 }
 .accordion>a:hover,
 .accordion>a.active{
-	background:#E8D0A9;
+	background:#067996;
 }
 .accordion>a.active{
-	color:#B77F24;
+	color:#ffffff;
 }
 .accordion>a>.alert-numb,
 .accordion>.sub-nav>a>.alert-numb{
@@ -73,11 +70,11 @@ body{
 	line-height:22px;
 	border-radius:15px;
 	text-align:center;
-	background:#665e51;
+	background:#036c96;
 }
 .accordion>a.active>.alert-numb,
 .accordion>.sub-nav>a.active>.alert-numb{
-	background:#d0a051;
+	background:#0583b4;
 }
 .accordion .sub-nav{
 	display:none;
@@ -157,7 +154,7 @@ body{
 	line-height:30px;
 	border-radius:50%;
 	text-align:center;
-	background:#e8d0a9;
+	background:#074f80;
 	-webkit-transform:scale(0) rotate(0);
 	    -ms-transform:scale(0) rotate(0);
 	        transform:scale(0) rotate(0);
@@ -205,46 +202,8 @@ body{
 	        transform:translateY(-80px) scale(0);
 	border:1px solid rgba(0,0,0,.2);
 }
-.accordion .about-me .social-link .link-twitter{
-	background:#55acce;
-}
-.accordion .about-me .social-link .link-codepen{
-	background:#1a1a1b;
-}
-.accordion .about-me .social-link .link-facebook{
-	background:#3b5998;
-}
-.accordion .about-me .social-link .link-dribbble{
-	background:#ea4c89;
-}
-.accordion .about-me .social-link .link:hover{
-	box-shadow:none;
-}
-.accordion .about-me .social-link.active .link{
-	-webkit-transform:translateY(0) scale(1);
-	    -ms-transform:translateY(0) scale(1);
-	        transform:translateY(0) scale(1);
-}
-.accordion .about-me .social-link.active .link:nth-child(1){
-	-webkit-transition-duration:.1s;
-	        transition-duration:.1s;
-}
-.accordion .about-me .social-link.active .link:nth-child(2){
-	-webkit-transition-duration:.2s;
-	        transition-duration:.2s;
-}
-.accordion .about-me .social-link.active .link:nth-child(3){
-	-webkit-transition-duration:.3s;
-	        transition-duration:.3s;
-}
-.accordion .about-me .social-link.active .link:nth-child(4){
-	-webkit-transition-duration:.4s;
-	        transition-duration:.4s;
-}
-.accordion .about-me .social-link.active .link:nth-child(5){
-	-webkit-transition-duration:5s;
-	        transition-duration:5s;
-}
+
+
 .accordion .about-me.blur p,
 .accordion .about-me.blur h4,
 .accordion .about-me.blur .photo{
@@ -304,7 +263,7 @@ body{
 .accordion .chat .user.user-dribble .photo{
 	color:#fff;
 	margin-right:5px;
-	background:#f15e95;
+	background:#6997c2;
 }
 .accordion .chat .user .text-msg{
 	max-width:70%;
@@ -341,7 +300,7 @@ body{
 }
 .accordion .invite .btn:hover{
 	box-shadow:none;
-	background:#cb386f;
+	background:#90acc4;
 }
 </style>
 
