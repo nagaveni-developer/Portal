@@ -7,14 +7,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> VCE Portal </title>
+		<title> VCE Portal </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/material.css">
         <link rel="icon" href="images/icon1.png" >
         <link type="text/css" rel="stylesheet" href="fonts/font.css">
         <style>
-
 *,:after,:before{box-sizing:border-box}
 .pull-left{float:left}
 .pull-right{float:right}
@@ -40,6 +41,9 @@
 	background:#4ca4b9;
 
 	box-shadow:0 17px 50px 0 rgba(0,0,0,.19),0 12px 15px 0 rgba(0,0,0,.24);
+}
+.clearfix{
+	padding : 20px;
 }
 .accordion>a{
 	color:#374046;
@@ -334,24 +338,20 @@
             </div>
             <a href="#2"><i class="fa fa-id-card"></i>  Details</a>
             <div class="sub-nav">
-				<div class="html chat">
-                    <div class="user user-khadkamhn clearfix">
-                       <span class="text-msg pull-left">Name :<?php echo $_SESSION["name"]; ?></span><br>
+					<div class="clearfix">
+                       <p><span class="text-msg pull-left">Name : <?php echo $_SESSION["name"] ; ?></p></span><br>
+
+						<p><span class="text-msg pull-left">Email : <?php echo $_SESSION["email"]; ?></p><br>
+                   
+						<p><span class="text-msg pull-left">Year : <?php echo $_SESSION["year"] ; ?></p><br>
+                   
+						<p><span class="text-msg pull-left">Branch : <?php echo $_SESSION["branch"] ; ?></span></p><br>
+                   
+                   
+						<p><span class="text-msg pull-left">Joined date :
+                        <?php echo $_SESSION["date"]; ?></span></p> <br>
                     </div>
-                    <div class="user user-khadkamhn clearfix">
-						<span class="text-msg pull-left">Email : <?php echo $_SESSION["email"]; ?></p><br>
-                    </div>    
-                    <div class="user user-khadkamhn clearfix">
-						<span class="text-msg pull-left">Year :<?php echo $_SESSION["year"]; ?></p><br>
-                    </div>
-                    <div class="user user-khadkamhn clearfix">
-						<span class="text-msg pull-left">Branch :<?php echo $_SESSION["branch"]; ?></span><br>
-                    </div>
-                    <div class="user user-khadkamhn clearfix">
-						<span class="text-msg pull-left">Joined date :
-                          <p><?php echo $_SESSION["date"]; ?></p> </span><br>
-                    </div>
-			   </div>
+			  
 			</div>
             <a href="#3"><i class="fa fa-history"></i> My Activity <span class="pull-right alert-numb">21</span></a>
 			<div class="sub-nav">
@@ -382,11 +382,7 @@
                      
 
                 </div>
-		</div>
-
-          
-
-      
+		</div>         
         <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-plugins.js"></script>
 <script>
@@ -439,6 +435,6 @@ Profile = {
             &copy; 2020 &bull;VCE Queries.
         </div>
 
-    </body>
-
+	</body>
+	
 </html>
