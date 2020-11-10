@@ -156,7 +156,7 @@
                         <div id="popup2">
                             <a id="sug-close" href="#popup2">X</a>
                             <h2>Steps for lost memo</h2>
-                            <div class="buttons" ><input type="button" value="Proceegweraed" id="proceed" class="up-in"></div>
+                            <div class="buttons" ><input type="button" value="Proceed to pay" id="proceed" class="up-in"></div>
                         </div>
               
              </form>
