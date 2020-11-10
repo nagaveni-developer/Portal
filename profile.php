@@ -309,7 +309,7 @@
         <!-- navigation bar -->
         <a href="index.php">
             <div id="log">
-                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Queries</div>
+                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div>
             </div>
         </a>
         <ul id="nav-bar">
@@ -356,7 +356,7 @@
             <a href="#3"><i class="fa fa-history"></i> My Activity <span class="pull-right alert-numb">21</span></a>
 			<div class="sub-nav">
 				   <a href="#">Requested<span class="pull-right alert-numb">11</span></a>
-				<a href="#">Submitted <span class="pull-right alert-numb">10</span></a>
+				<a href="#">Applied <span class="pull-right alert-numb">10</span></a>
 			</div>
           <p >
                     <?php
