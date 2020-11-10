@@ -31,9 +31,9 @@
 
 }
 .accordion{
-	width:80%;
+	width:1780%;
 	margin:auto;
-	max-width:280px;
+	max-width:500px;
 	overflow:hidden;
 	border-radius:3px;
     color:white;
