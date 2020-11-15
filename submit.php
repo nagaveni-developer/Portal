@@ -137,28 +137,55 @@
                 <h2 style=" color: #63CFB6;">Choose the Document</h2><br>
                     
                             <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>-->      
-               
+               <div class="model-block">
                 <div class="button-block">                            
-                    <a  href="#popup1" ><div class="buttons"><input type="button" value="Renewal" id="renewal" class="up-in"></div></a>
+                    <a  href="#pop1" ><div class="buttons"><input type="button" value="Renewal" id="renewal" class="up-in"></div></a>
                 </div>
                
-                        <div id="popup1">
-                            <a id="sug-close" href="#popup1">X</a>
-                            <h2>Steps for Renewal</h2>
-                            <div class="buttons" ><input type="button" value="Proceed" id="proceed" class="up-in"></div>
-                        </div><br><br>
-              
-               
                 <div class="button-block">                            
-                    <a id="sug-button" href="#popup2" ><div class="buttons"><input type="button" value="Lost Memo" id="lostmemo" class="up-in"></div></a><br><br>
+                    <a href="#pop2" ><div class="buttons"><input type="button" value="Lost Memo" id="lostmemo" class="up-in"></div></a><br><br>
                 </div>
-               
-                        <div id="popup2">
-                            <a id="sug-close" href="#popup2">X</a>
-                            <h2>Steps for lost memo</h2>
-                            <div class="buttons" ><input type="button" value="Proceed to pay" id="proceed" class="up-in"></div>
-                        </div>
-              
+
+                </div>
+               <div class="bg-model" id="pop1">
+                   <div class="model-content">
+                   <div class="close">x</div>
+                   <center>
+                   <br>
+                   <h2 style=" color: #63CFB6;">Renewal</h2><br>
+                   <br>
+                   </center>
+                   <p style="color:black;">
+                   1. Apply for Tution Fee Reimbursement online.<br>
+                   2. Upload Prevous year MEMO, Income Affidavit,College bonofied.<br>
+                   3. Submit the soft copy of attachments.
+                   <br><br>
+                   </p>
+                   <center>
+                   <div class="buttons" ><input type="button" value="Proceed to submit docs" id="proceed" class="up-in"></div>
+                  </center>
+                   </div>
+               </div>
+               <div class="bg-model" id="pop2">
+                   <div class="model-content">
+                   <div class="close">x</div>
+                   <center>
+                   <br>
+                   <h2 style=" color: #63CFB6;">Lost MEMO</h2><br>
+                   <br>
+                   </center>
+                   <p style="color:black;">
+                   1. .<br>
+                   2. .<br>
+                   3. .
+                   <br><br>
+                   </p>
+                   <center>
+                   <div class="buttons" ><input type="button" value="Proceed to submit docs" id="proceed" class="up-in"></div>
+                  </center>
+                   </div>
+               </div>
+
              </form>
          
         </div>
@@ -168,6 +195,24 @@
             &copy; 2020 &bull;VCE Queries.
         </div>
         <!-- Sripts -->
+        <script>
+        var modalBtns = document.querySelectorAll('.model-block');
+        
+        document.getElementById('renewal').addEventListener('click',function(){
+          document.querySelector('.bg-model').style.display='flex';
+        });
+        document.querySelector('.close').addEventListener('click',function(){
+          document.querySelector('.bg-model').style.display='none';
+        });
+        </script>
+        <script>
+        document.getElementById('lostmemo').addEventListener('click',function(){
+          document.querySelector('.bg-model').style.display='flex';
+        });
+        document.querySelector('.close').addEventListener('click',function(){
+          document.querySelector('.bg-model').style.display='none';
+        });
+        </script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script type="text/javascript" src="js/jquery-3.2.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/script.js"></script>
