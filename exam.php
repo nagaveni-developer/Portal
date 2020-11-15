@@ -51,6 +51,8 @@ button:hover, a:hover {
 <h2 style="text-align:center;color:#087D72;">Student Document Requests</h2>
 <div class="log">
 <a href="logout.php"><button type="button">logout</button> </a>
+<br>
+<button type="button">completed</button>
 </div>
 <div class="card">
   

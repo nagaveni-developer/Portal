@@ -1,60 +1,9 @@
 
 <?php
     session_start();
-
-    if( isset($_SESSION['user'])){
-        header("Location: profile.php");
-    }
-
-    if( isset( $_POST["submit"] ) )
-    {
-
-        function valid($data){
-            $data=trim(stripslashes(htmlspecialchars($data)));
-            return $data;
-        }
-
-        $inuser = valid( $_POST["username"] );
-        $inkey = valid( $_POST["password"] );
-
-        include("connect.php");
-
-        $query = "SELECT * FROM users WHERE username='$inuser'";
-        echo $inuser;
-        $result = mysqli_query( $conn, $query);
-        if(mysqli_error($conn)){
-            echo "<script>window.alert('Something Went Wrong. Try Again');</script>";
-        }
-        else if( mysqli_num_rows($result) > 0 )
-        {
-            while( $row = mysqli_fetch_assoc($result) ){
-                $user = $row['username'];
-                $pass = $row['password'];
-                $year= $row['year'];
-                $branch=$row['branch'];
-                $name = $row['name'];
-                $email = $row['email'];
-                $date = $row['join_date'];
-            }
-
-            if( password_verify( $inkey, $pass ) ){
-                $_SESSION['user'] = $user;
-                $_SESSION['name'] = $name;
-                $_SESSION['year']=$year;
-                $_SESSION['branch']=$branch;
-                $_SESSION['email'] = $email;
-                $_SESSION['date'] = $date;
-                header('Location: index.php');
-            }
-            else{
-                echo "<script>window.alert('Wrong Username or Password Combination. Try Again');</script>";
-            }
-        }
-        else{
-            echo "<script>window.alert('No Such User exist in database');</script>";
-        }
-        mysqli_close($conn);
-    }
+    include("connect.php");
+    if(! isset($_SESSION['user']))
+        header("Location: login.php");
 ?>
 
 <!DOCTYPE html>

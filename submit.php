@@ -134,6 +134,7 @@
         <div id="content">
            
             <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
+                <center>
                 <h2 style=" color: #63CFB6;">Choose the Document</h2><br>
                     
                             <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>-->      
@@ -141,12 +142,13 @@
                 <div class="button-block">                            
                     <a  href="#pop1" ><div class="buttons"><input type="button" value="Renewal" id="renewal" class="up-in"></div></a>
                 </div>
-               
+               <br>
                 <div class="button-block">                            
                     <a href="#pop2" ><div class="buttons"><input type="button" value="Lost Memo" id="lostmemo" class="up-in"></div></a><br><br>
                 </div>
 
                 </div>
+                </center>
                <div class="bg-model" id="pop1">
                    <div class="model-content">
                    <div class="close">x</div>

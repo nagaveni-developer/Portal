@@ -59,7 +59,7 @@
         <div id="content">
             
             <center>
-                    <a  href="submit.php">
+                    <a  href="student.php">
                         <div id="algo" class="img">
                             <div id="p" title="Open">Examination Branch</div>
                         </div>
