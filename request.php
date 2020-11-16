@@ -20,7 +20,7 @@
         <!-- navigation bar -->
         
             <div id="log">
-                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div>
+                <div id="ntro" style="color:black;"><b>VCE Portal</b></div>
             </div>
     
         <ul id="nav-bar">
@@ -45,7 +45,7 @@
             <center>
                
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
-                            <h2 style=" color: #63CFB6;">Choose the Document</h2><br>
+                            <h2 style="color:black;">Choose the Document</h2><br>
                  
                         <div id="button-block">   
                             <div class="buttons"><input type="button" value="Allotment Order" id="renewal" class="up-in"><br><br></div>
@@ -60,7 +60,7 @@
 
         <!-- Footer -->
         <div id="footer">
-            &copy; 2020 &bull; VCE Queries.
+            &copy; 2020 &bull; VCE Portal.
         </div>
 
         <!-- Sripts -->

@@ -79,9 +79,9 @@
     <body id="_5">
         <!-- navigation bar -->
         
-            <div id="log">
-                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div>
-            </div><br><br><br><br>
+            <div id="log"><br>
+                <div id="ntro"  style="color:black;"><b>VCE Portal</b></div>
+            </div><br><br><br>
     
         <ul id="nav-bar">
         <div class="topnav" id="myTopnav">
@@ -120,8 +120,8 @@
         <div id="content">
             <center>
                 <div class="heading">
-                    <h1 class="logo"><div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div></h1>
-                    <p id="tag-line">  Students <=> Examination Branch</p>
+                    <div id="ntro"  style="color:black;"><b>VCE Portal</b></div></h1>
+                    <p id="tag-line" style="color:black;">  Students <=> Examination Branch</p>
                 </div>
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
                     <input name="username" id="user" type="text" title="Username" placeholder="Username" required>
@@ -133,14 +133,17 @@
                             <div class="buttons"><input name="submit" type="submit" value="Log In" class="up-in"></div>
                             <div class="buttons" id="new"><input type="button" value="Create a new account" class="up-in" id="tosign"></div>
                         </center>
-                    </div>
-                    <a href="contacts.php" id="trouble"><span>Having Trouble in login ? Contact Us</span></a>
+                    </div><br>
+                    <a href="contacts.php" id="trouble" style="color:black;"><span>Having Trouble in login ? Contact Us</span></a>
                 </form>
             </center>
         </div>
 
 
         <!-- Footer -->
+        <div id="footer">
+            &copy; 2020 &bull; VCE Portal.
+        </div>
         
 
         <!-- Sripts -->

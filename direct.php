@@ -152,7 +152,7 @@
         <!-- navigation bar -->
         <a href="index.php">
             <div id="log">
-                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div>
+                <div id="ntro"  style="color:black;"><b>VCE Portal</b></div>
             </div>
         </a>
         <ul id="nav-bar">

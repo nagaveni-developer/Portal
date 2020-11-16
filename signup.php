@@ -22,7 +22,7 @@
         <!-- navigation bar -->
         <a href="index.php">
             <div id="log">
-                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div>
+                <div id="ntro"  style="color:black;"><b>VCE Portal</b></div>
             </div>
         </a>
         <ul id="nav-bar">
@@ -48,7 +48,7 @@
             <div id="sf">
                 <center>
                     <div class="heading">
-                        <h1 class="logo"><div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div></h1>
+                        <div id="ntro" style="color:black;"><b>VCE Portal</b></div></h1>
                         <p id="tag-line">Students <=> Examination Branch</p>
                     </div>
 
@@ -119,7 +119,7 @@
          -->
         <!-- Footer -->
         <div id="footer" style="padding:20px;">
-            &copy; 2020&bull; VCE Queries.
+            &copy; 2020&bull; VCE Portal.
         </div>
 
         <!-- Sripts -->
