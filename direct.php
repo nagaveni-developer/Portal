@@ -151,8 +151,8 @@
     <body id="_3">
         <!-- navigation bar -->
         <a href="index.php">
-            <div id="log">
-                <div id="ntro"  style="color:black;"><b>VCE Portal</b></div>
+            <div id="log" style="color:black;"><br>
+                <div id="ntro"  style="color:white;"><b>VCE Portal</b></div>
             </div>
         </a>
         <ul id="nav-bar">
@@ -200,7 +200,7 @@
 
         <!-- Footer -->
         <div id="footer">
-            &copy; 2020 &bull; VCE Queries.
+            &copy; 2020 &bull; VCE Portal.
         </div>
         <script>
 var slideIndex = 1;

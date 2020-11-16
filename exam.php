@@ -35,6 +35,20 @@ button {
   width: 50%;
   font-size: 18px;
 }
+input{
+
+  border: 2px solid white;
+  outline: 0;
+  display : inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+}
+}
 
 a {
   text-decoration: none;
@@ -56,7 +70,7 @@ button:hover, a:hover {
 <a href="exam_comp.php"><button type="button">completed</button></a>
 </div>
 <div class="card">
-  
+  <form action="mail.php" method="post">
   <h3>Name : John Doe</h3>
   <p>Year : 2</p>
   <p>Branch : CSE</p>
@@ -64,7 +78,8 @@ button:hover, a:hover {
   <p>Date : 11-10-2020</p>
   <button type="button">Upload Doc.</button>
   <button type="button">Collect Doc.</button>
-  <button type="button">Done</button> 
+  <input type="submit" value="submit" name="submit">
+  </form> 
 </div>
 
 </body>

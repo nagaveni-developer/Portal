@@ -19,8 +19,8 @@
     <body id="_5">
         <!-- navigation bar -->
         
-            <div id="log">
-                <div id="ntro" style="color:black;"><b>VCE Portal</b></div>
+            <div id="log"><br>
+                <div id="ntro" style="color:white;"><b>VCE Portal</b></div>
             </div>
     
         <ul id="nav-bar">
@@ -48,7 +48,7 @@
                             <h2 style="color:black;">Choose the Document</h2><br>
                  
                         <div id="button-block">   
-                            <div class="buttons"><input type="button" value="Allotment Order" id="renewal" class="up-in"><br><br></div>
+                            <div class="buttons"><input type="button" value="Allotment Order" id="renewal" class="up-in"><br><br></div><br>
                             <div class="buttons"><input type="button" value="Bonofied" class="up-in"><br><br></div>
                             <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>
                     -->

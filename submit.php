@@ -121,8 +121,8 @@
     <body id="_5">
         <!-- navigation bar -->
         <a href="index.php">
-            <div id="log">
-                <div id="ntro" style="color:black;"><b>VCE Portal</b></div>
+            <div id="log"><br>
+                <div id="ntro" style="color:white;"><b>VCE Portal</b></div>
             </div>
         </a>
         <ul id="nav-bar">
@@ -135,7 +135,7 @@
            
             <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
                 <center>
-                <h2 style=" color: #63CFB6;">Choose the Document</h2><br>
+                <h2 style="color:black;">Choose the Document</h2><br>
                     
                             <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>-->      
                <div class="model-block">

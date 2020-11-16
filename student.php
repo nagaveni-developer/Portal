@@ -70,8 +70,8 @@
     <body id="_5">
         <!-- navigation bar -->
         
-            <div id="log">
-                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div>
+            <div id="log"><br>
+                <div id="ntro" style="color:white;"><b>VCE Portal</b></div>
             </div>
     
         <ul id="nav-bar">
@@ -95,7 +95,7 @@
         <div id="content">
             <center>
                 <div class="heading">
-                    <h2 id="trouble">Examination Branch<h2>
+                    <h2 id="trouble" style="color:black;">Examination Branch<h2>
                     
                 </div>
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
@@ -113,7 +113,7 @@
 
         <!-- Footer -->
         <div id="footer">
-            &copy; 2020 &bull; VCE Queries.
+            &copy; 2020 &bull; VCE Portal.
         </div>
 
         <!-- Sripts -->

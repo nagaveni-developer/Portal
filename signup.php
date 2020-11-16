@@ -21,8 +21,8 @@
     <body id="_6">
         <!-- navigation bar -->
         <a href="index.php">
-            <div id="log">
-                <div id="ntro"  style="color:black;"><b>VCE Portal</b></div>
+            <div id="log"><br>
+                <div id="ntro"  style="color:white;"><b>VCE Portal</b></div>
             </div>
         </a>
         <ul id="nav-bar">

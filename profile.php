@@ -312,11 +312,11 @@
     <body id="pro">
         <!-- navigation bar -->
         <a href="index.php">
-            <div id="log">
-                <div id="i">i</div><div id="cir">.</div><div id="ntro">VCE Portal</div>
+            <div id="log"><br>
+                <div id="ntro"  style="color:white;"><b>VCE Portal</b></div>
             </div>
         </a>
-        <ul id="nav-bar">
+        <ul id="nav-bar" style="color:black;">
             <a href="direct.php"><li>Request</li></a>
             <a href="profile.php"><li id="home">Hi, <?php echo $_SESSION["user"]; ?></li></a>
             <a href="logout.php"><li>Log Out</li></a>

@@ -120,7 +120,7 @@
         <div id="content">
             <center>
                 <div class="heading">
-                    <div id="ntro"  style="color:black;"><b>VCE Portal</b></div></h1>
+                    <div id="ntro"  style="color:black;"><b>VCE Portal</b></div></h1><br><br>
                     <p id="tag-line" style="color:black;">  Students <=> Examination Branch</p>
                 </div>
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">

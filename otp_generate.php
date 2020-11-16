@@ -37,9 +37,9 @@
         <div id="content">
             <div id="sf">
                 <center>
-                    <div class="heading">
-                        <div id="ntro"  style="color:black;"><b>VCE Portal</b></div></h1>
-                        <p id="tag-line">ask clarify explore</p>
+                    <div class="heading"><br>
+                        <div id="ntro"  style="color:white;"><b>VCE Portal</b></div></h1><br><br>
+                        <p id="tag-line">Student<=>Examination Branch</p>
                     </div>
 
                     <form  action="otp_verify.php" method="post"><br><br>
