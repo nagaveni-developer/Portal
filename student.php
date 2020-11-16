@@ -101,8 +101,8 @@
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
                     <div id="button-block">
                        
-                            <div class="buttons"><a href="submit.php"><input name="submit" type="button" value="Submit Documents" class="up-in"></a></div><br><br>
-                            <div class="buttons"><a href="request.php"><input type="button" value="Request a Document" class="up-in"></a></div>
+                            <div class="buttons" ><a href="submit.php"><input name="submit" type="button" value="Submit Documents" class="up-in" style="background-color:black;"></a></div><br><br>
+                            <div class="buttons"><a href="request.php"><input type="button" value="Request a Document" class="up-in"  style="background-color:black;"></a></div>
                        
                     </div>
                    

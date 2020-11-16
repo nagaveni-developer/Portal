@@ -10,12 +10,12 @@ body{
     font-size: 15px;
     background-image: url("back.jpg");
     background-repeat: no-repeat;
-    min-width: 1000px;
-    margin: 0 auto;
+    width:100%;
+    
     font-weight: 500;
     height: 100%;
-  background-position: center;
-  background-size: cover;
+    background-position: center;
+    background-size: cover;
 
 }
 
@@ -301,7 +301,7 @@ p#tag-line{
     line-height: 80px;
     font-size: 50px;
     color: #000000;
-    font-family: "LCALLIG";
+   
     width: 50px;
     height: 80px;
 }
@@ -312,7 +312,7 @@ p#tag-line{
     text-indent: 10px;
     background: #ffffff;
     font-size: 50px;
-    font-family: "LCALLIG";
+ 
     border-radius: 100%;
     width: 50px;
     height: 80px;
@@ -321,7 +321,7 @@ p#tag-line{
 /* logo text */
 #ntro{
     display: inline-block;
-    font-family: "LCALLIG";
+
     font-size: 44.8px;
 }
 
@@ -365,6 +365,12 @@ input[type="password"]:hover{
     font-family: Georgia;
     font-variant: small-caps;
     word-spacing: 5px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:30px;   /* Height of the footer */
+
+ 
 }
 /* Footer Ends */
 /* Contacts Page */
@@ -443,13 +449,13 @@ input[type="password"]:hover{
 }
 
 #algo{
-    background: url(http://vce.ac.in/About/College/gallery/02.jpg);
+    background: url();
     background-size: 100%;
     background-repeat: no-repeat;
    
 }
 #database{
-    background: url(http://www.vce.ac.in/slides/Slide_03.jpg);
+    background: url();
     background-size: 100%;
     background-repeat: no-repeat;
     width: 300px;
@@ -764,7 +770,7 @@ a#try:hover{
     color: white;
     background: #333;
     display: block;
-    font-family: LCALLIG;
+   
     font-size: 32px;
     margin: -10px -10px 0;
     padding: 10px 10px 0px;
