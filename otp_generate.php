@@ -20,7 +20,7 @@
             <?php
                 if(! isset($_SESSION['user'])){
             ?>
-            <a href="login.php"><li>Log In</li></a>
+            <a href="index.php"><li>Log In</li></a>
             <a href="signup.php"><li id="home">Sign Up</li></a>
             <?php
                 }

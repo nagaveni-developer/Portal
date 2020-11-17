@@ -74,10 +74,9 @@ button:hover, a:hover {
   <h3>Name : John Doe</h3>
   <p>Year : 2</p>
   <p>Branch : CSE</p>
-  <p>Requested Doc. : Bonafied</p>
+  <p>Requested Doc. : Lost Memo</p>
   <p>Date : 11-10-2020</p>
   <button type="button">Upload Doc.</button>
-  <button type="button">Collect Doc.</button>
   <input type="submit" value="submit" name="submit">
   </form> 
 </div>

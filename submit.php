@@ -70,6 +70,8 @@
                    2. Upload Prevous year MEMO, Income Affidavit,College bonofied.<br>
                    3. Submit the soft copy of attachments.
                    <br><br>
+                   <input type="file" name="image" id="file">
+                   <input type="submit" value="Upload File" name="submit"><br><br>
                    </p>
                    <center>
                    <div class="buttons" ><input type="button" value="Proceed to submit docs" id="proceed" class="up-in"></div>

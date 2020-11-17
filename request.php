@@ -15,6 +15,7 @@
         <link type="text/css" rel="stylesheet" href="css/material.css">
         <link rel="icon" href="images/icon1.png" >
     </head>
+    <!---
     <style>
         .column {
   float: left;
@@ -66,7 +67,7 @@
     vertical-align: middle;
     padding-left: 10px;
 }
-        </style>
+        </style>-->
     <body id="_5">
         <!-- navigation bar -->
         
@@ -93,8 +94,10 @@
         </ul>
         <!-- content -->
         <div id="content">
+
+        <form action="upload.php" method="post" enctype="multipart/form-data">
             <center>
-                <div class="row">
+               <!-- <div class="row">
                     <div class="column">
             <div class="fixedBox">
             <form action="#">
@@ -105,8 +108,7 @@
             </div>
             </form>
             </div></div>
-               <div class="column">
-                <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
+               <div class="column">-->
                             <h2 style="color:black;">Choose the Document</h2><br>
                  
                         <div class="modal-block">   
@@ -126,14 +128,14 @@
                    <div class="close">x</div>
                    <center>
                    <br>
-                   <h2 style=" color: black;">Allotment Order</h2><br>
+                   <h2 style=" color: black;">Allotment Order</h2>
                    <br>
                    </center>
                    <p style="color:black;">
                    1. Reason for application.<br>
                    2. Required to pay 10/-.<br>
                    3. Click proceed, to pay the amount.
-                   <br><br>
+                   <br>
                    </p>
                    <center>
                    <div class="buttons" ><input type="button" value="Proceed to Pay" id="proceed" class="up-in"></div>
@@ -155,13 +157,15 @@
                    <br><br>
                    </p>
                    <center>
-                   <div class="buttons" ><input type="button" value="Proceed" id="proceed" class="up-in"></div>
+                  
+
+                   <div class="buttons" ><input type="submit" value="Proceed" id="proceed" class="up-in"></div>
                   </center>
                    </div>
                </div>
 
                 </form>
-            </div>
+            
             </center>
         </div>
 

@@ -8,12 +8,12 @@
 <html>
     <head>
 		<title> VCE Portal </title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/material.css">
-        <link rel="icon" href="images/icon1.png" >
+		<link rel="icon" href="images/icon1.png" >
         <link type="text/css" rel="stylesheet" href="fonts/font.css">
         <style>
 *,:after,:before{box-sizing:border-box}
@@ -27,7 +27,7 @@
 	left:0;
 	right:0;
 	bottom:0;
-	padding:15px;
+	padding:75px;
 	position:fixed;
 
 }
@@ -358,8 +358,8 @@
 			</div>
             <a href="#3"><i class="fa fa-history"></i> My Activity <span class="pull-right alert-numb">21</span></a>
 			<div class="sub-nav">
-				   <a href="#">Requested<span class="pull-right alert-numb">11</span></a>
-				<a href="#">Applied <span class="pull-right alert-numb">10</span></a>
+				   <a href="#">Requested<span class="pull-right alert-numb">0</span></a>
+				<a href="#">Applied <span class="pull-right alert-numb">0</span></a>
 			</div>
           <p >
                     <?php
@@ -435,7 +435,7 @@ Profile = {
 
         <!-- Footer -->
         <div id="footer">
-            &copy; 2020 &bull;VCE Queries.
+            &copy; 2020 &bull;VCE Portal.
         </div>
 
 	</body>

@@ -68,7 +68,7 @@
                             <center>
 
                                 <div class="buttons"><input name="submit" type="submit" value="SEND OTP" class="up-in"></div>
-                                <div class="buttons" id="new"><input type="button" value="Already a member : Log In" class="up-in" id="tolog"></div>
+                                <a href="index.php"><div class="buttons" id="new"><input type="button" value="Already a member : Log In" class="up-in"></div></a>
 
                             </center>
                         </div>
