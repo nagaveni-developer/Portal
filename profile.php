@@ -38,7 +38,7 @@
 	overflow:hidden;
 	border-radius:3px;
     color:white;
-	background:#ccffcc;
+	background:#e6ffe6;
 
 	box-shadow:0 17px 50px 0 rgba(0,0,0,.19),0 12px 15px 0 rgba(0,0,0,.24);
 }
@@ -58,7 +58,7 @@
 }
 .accordion>a:hover,
 .accordion>a.active{
-	background:#004d00;
+	background:black;
         color:white;
 }
 .accordion>a.active{
