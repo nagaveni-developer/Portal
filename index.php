@@ -80,8 +80,8 @@
         <!-- navigation bar -->
         
             <div id="log"><br>
-                <div id="ntro"  style="color:black;"><b>VCE Portal</b></div>
-            </div><br><br><br>
+                <div id="ntro"  style="color:white;"><b>VCE Portal</b></div>
+            </div>
     
         <ul id="nav-bar">
         <div class="topnav" id="myTopnav">
@@ -100,7 +100,7 @@
             <?php
                 }
             ?>
-        </ul>
+        </ul><!--
         <div class="hb">
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
          <i class="fa fa-bars" style="font-size:50px;"></i></a>
@@ -115,7 +115,7 @@
     			x.className = "topnav";
   		}
 		}
-        </script>
+        </script>-->
         <!-- content -->
         <div id="content">
             <center>

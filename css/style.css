@@ -130,7 +130,7 @@ a li:hover{
     cursor: pointer;
 }
 #
-/* nav responsive*/
+/* nav responsive
 .topnav {
     overflow: hidden;
     background-color: rgb(41, 114, 150);
@@ -163,7 +163,6 @@ a li:hover{
     background-color:none;
     color:none;
   }
- 
   @media screen and (min-width: 601px){
       .topnav a.icon{
           display:none;
@@ -194,7 +193,7 @@ a li:hover{
       display: block;
       text-align: left;
     }
-  }
+  }*/
 /* Navigation Bar Ends */
 
 #search{
