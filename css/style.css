@@ -93,7 +93,7 @@ a li{
 a li:hover{
     cursor: pointer;
     color: white;
-    border-bottom: solid 5px CornflowerBlue;
+    border-bottom: solid 6px #ccffcc;
 }/*modal section*/
 
 .bg-modal{
