@@ -159,7 +159,7 @@
                    <center>
                   
 
-                   <div class="buttons" ><input type="submit" value="Proceed" id="proceed" class="up-in"></div>
+                   <div class="buttons" ><input type="button" value="Proceed" id="proceed" class="up-in"></div>
                   </center>
                    </div>
                </div>

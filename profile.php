@@ -356,7 +356,7 @@
                     </div>
 			  
 			</div>
-            <a href="#3"><i class="fa fa-history"></i> My Activity <span class="pull-right alert-numb">21</span></a>
+            <a href="#3"><i class="fa fa-history"></i> My Activity <span class="pull-right alert-numb">0</span></a>
 			<div class="sub-nav">
 				   <a href="#">Requested<span class="pull-right alert-numb">0</span></a>
 				<a href="#">Applied <span class="pull-right alert-numb">0</span></a>

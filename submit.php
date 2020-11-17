@@ -88,13 +88,13 @@
                    </center>
                    <p style="color:black;">
                    1. Reason for application.<br>
-                   2. Click proceed.<br>
-                   3. Submit the previous Semester MEMO copy.<br><br>
+                   
+                   2. Submit the previous Semester MEMO copy.<br><br>
                    <input type="file" name="image" id="file">
                    <input type="submit" value="Upload File" name="submit"><br><br>
 
                    
-                   4. After Submitting documents pay 500/-.
+                   3. After Submitting documents pay 500/-.
                    <br><br>
                    </p>
                    <center>
