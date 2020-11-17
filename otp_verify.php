@@ -25,7 +25,7 @@ if( isset( $_POST["submit"] ) )
 //                echo $query;
         else if( mysqli_query( $conn, $query) ){
             alert("verification Successful");
-            header( "Refresh:0; url=login.php", true, 303);
+            header( "Refresh:0; url=index.php", true, 303);
         }
         else{
 //                    echo mysqli_error($conn);
