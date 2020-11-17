@@ -15,6 +15,58 @@
         <link type="text/css" rel="stylesheet" href="css/material.css">
         <link rel="icon" href="images/icon1.png" >
     </head>
+    <style>
+        .column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+        .fixedBox{
+    max-width: 500px;
+    margin: 50px auto;
+    box-sizing: border-box;
+    border: 1px solid none;
+    padding: 30px 20px;
+}
+.search{
+    position: relative;
+}
+.searchBox {
+	display: block;
+	padding: 5px 30px;
+	font-size: 17px;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+.pre {
+	position: absolute;
+	bottom: 7px;
+	left: 0;
+	padding-left: 8px;
+}
+.pre img{
+    width: 12px;
+    vertical-align: middle;
+}
+.after {
+	position: absolute;
+	bottom: 7px;
+	right: 0;
+	padding-right: 8px;
+}
+.after img{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+        </style>
     <body id="_5">
         <!-- navigation bar -->
         
@@ -42,7 +94,18 @@
         <!-- content -->
         <div id="content">
             <center>
-               
+                <div class="row">
+                    <div class="column">
+            <div class="fixedBox">
+            <form action="#">
+            <div class="search">
+                <span class="pre"><img src="https://i.ibb.co/WWJ1q6f/search-v1.png" alt=""></span>
+                <input type="search" class="searchBox">
+                <span class="after"><img src="https://i.ibb.co/fXD1GsL/keyboard.png" alt="" title="Input Tool"></span>
+            </div>
+            </form>
+            </div></div>
+               <div class="column">
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
                             <h2 style="color:black;">Choose the Document</h2><br>
                  
@@ -98,6 +161,7 @@
                </div>
 
                 </form>
+            </div>
             </center>
         </div>
 

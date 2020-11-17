@@ -124,8 +124,8 @@
                     <p id="tag-line" style="color:black;">  Students <=> Examination Branch</p>
                 </div>
                 <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
-                    <input name="username" id="user" type="text" title="Username" placeholder="Username" required>
-                    <input name="password" id="key" type="password" title="Password" placeholder="Password" required>
+                    <input name="username" id="user" type="text" title="Username" placeholder="Username" style="color:black;" required>
+                    <input name="password" id="key" type="password" title="Password" placeholder="Password" style="color:black;" required>
                     <i class="material-icons" id="lock">lock</i>
                     <i class="material-icons" id="person">person</i>
                     <div id="button-block">

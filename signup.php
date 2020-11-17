@@ -48,8 +48,8 @@
             <div id="sf">
                 <center>
                     <div class="heading">
-                        <div id="ntro" style="color:black;"><b>VCE Portal</b></div></h1>
-                        <p id="tag-line">Students <=> Examination Branch</p>
+                        <div id="ntro" style="color:black;"><b>VCE Portal</b></div></h1><br><br>
+                        <p id="tag-line" style="color:black;">Students <=> Examination Branch</p>
                     </div>
 
                     <form action="otp_generate.php" method="post" enctype="multipart/form-data">
