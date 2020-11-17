@@ -12,112 +12,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/material.css">
         <link rel="icon" href="images/icon1.png" >
-        <link type="text/css" rel="stylesheet" href="fonts/font.css">
+
     </head>
-    <style>
-        #popup1
-{
-  position:relative;
-  top:5vh;
-  width:40vw;
-  background-color:#0e3b68;
-  -khtml-opacity:0;
-  -moz-opacity : 0;
-  -ms-filter: "alpha(opacity=0)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-  filter : alpha(opacity=0);
-  opacity : 0;
-  padding:15px;
-  border-style:solid;
-  border-radius:5px;
-  border-color:#007179;
-  transition:all 1s;
-  -webkit-transition:all 1s;
-}
-#popup2
-{
-  position:relative;
-  top:5vh;
-  width:40vw;
-  background-color:#0e3b68;
-  -khtml-opacity:0;
-  -moz-opacity : 0;
-  -ms-filter: "alpha(opacity=0)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-  filter : alpha(opacity=0);
-  opacity : 0;
-  padding:15px;
-  border-style:solid;
-  border-radius:5px;
-  border-color:#007179;
-  transition:all 1s;
-  -webkit-transition:all 1s;
-}
-
-#sug-close
-{
-  position:absolute;
-  left:100%;
-  top:-20px;
-  margin-left:-10px;
-  background-color:#EFF1F3;
-  font-size:12px;
-  padding:5px 7px;
-  border-radius:50px;
-  border-style:solid;
-  border-color:#0c90b1;;
-  font-weight:bold;
-  color:#0c90b1;
-  text-decoration:none;
-  font-family:arial;
-}
-
-#sug-close:hover
-{
-  background-color:#EFF1F3;
-  border-color:#097b97;
- 
-}
-
-#sug-close:active
-{
-  background-color:#A9F5F2;
-  color:black;
-}
-
-#popup1:target
-{
-  -khtml-opacity:1;
-  -moz-opacity : 1;
-  -ms-filter: "alpha(opacity=100)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-  filter : alpha(opacity=100);
-  opacity : 1;
-}
-#popup2:target
-{
-  -khtml-opacity:1;
-  -moz-opacity : 1;
-  -ms-filter: "alpha(opacity=100)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
-  filter : alpha(opacity=100);
-  opacity : 1;
-}
-.colpop-right {
-    float: right;
-    padding: 10px;
-    height: 300px; 
-    width: 55%;
-  }
-  .colpop-left {
-    float: left;
-    padding: 10px;
-    height: 300px; 
-    width: 25%;
-  }
-  
-  
-</style>
     <body id="_5">
         <!-- navigation bar -->
         <a href="index.php">
@@ -126,6 +22,15 @@
             </div>
         </a>
         <ul id="nav-bar">
+           <?php
+                if(! isset($_SESSION['user'])){
+            ?>
+            <a href="login.php"><li  id="home">Log In</li></a>
+            <a href="signup.php"><li>Sign Up</li></a>
+            <?php
+                }
+                else{
+            ?>
             <a href="direct.php"><li id="home">Request</li></a>
             <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
             <a href="logout.php"><li>Log Out</li></a>
@@ -138,19 +43,19 @@
                 <h2 style="color:black;">Choose the Document</h2><br>
                     
                             <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>-->      
-               <div class="model-block">
+               <div class="modal-block">
                 <div class="button-block">                            
-                    <a  href="#pop1" ><div class="buttons"><input type="button" value="Renewal" id="renewal" class="up-in"></div></a>
+                    <div class="buttons"><input href="#pop1" class="modal-button" type="button" value="Renewal" id="renewal" ></div>
                 </div>
                <br>
                 <div class="button-block">                            
-                    <a href="#pop2" ><div class="buttons"><input type="button" value="Lost Memo" id="lostmemo" class="up-in"></div></a><br><br>
+                    <div class="buttons"><input href="#pop2" class="modal-button" type="button" value="Lost Memo" id="lostmemo" class="up-in"></div><br><br>
                 </div>
 
                 </div>
                 </center>
-               <div class="bg-model" id="pop1">
-                   <div class="model-content">
+               <div class="bg-modal" id="pop1">
+                   <div class="modal-content">
                    <div class="close">x</div>
                    <center>
                    <br>
@@ -168,8 +73,8 @@
                   </center>
                    </div>
                </div>
-               <div class="bg-model" id="pop2">
-                   <div class="model-content">
+               <div class="bg-modal" id="pop2">
+                   <div class="modal-content">
                    <div class="close">x</div>
                    <center>
                    <br>
@@ -177,13 +82,14 @@
                    <br>
                    </center>
                    <p style="color:black;">
-                   1. .<br>
-                   2. .<br>
-                   3. .
+                   1. Reason for application.<br>
+                   2. Click proceed.<br>
+                   3. Submit the previous Semester MEMO copy.<br>
+                   4. After Submitting documents pay 500/-.
                    <br><br>
                    </p>
                    <center>
-                   <div class="buttons" ><input type="button" value="Proceed to submit docs" id="proceed" class="up-in"></div>
+                   <div class="buttons" ><input type="button" value="Proceed" id="proceed" class="up-in"></div>
                   </center>
                    </div>
                </div>
@@ -194,27 +100,45 @@
 
  <!-- Footer -->
         <div id="footer">
-            &copy; 2020 &bull;VCE Queries.
+            &copy; 2020 &bull;VCE Portal.
         </div>
         <!-- Sripts -->
         <script>
-        var modalBtns = document.querySelectorAll('.model-block');
-        
-        document.getElementById('renewal').addEventListener('click',function(){
-          document.querySelector('.bg-model').style.display='flex';
-        });
-        document.querySelector('.close').addEventListener('click',function(){
-          document.querySelector('.bg-model').style.display='none';
-        });
-        </script>
-        <script>
-        document.getElementById('lostmemo').addEventListener('click',function(){
-          document.querySelector('.bg-model').style.display='flex';
-        });
-        document.querySelector('.close').addEventListener('click',function(){
-          document.querySelector('.bg-model').style.display='none';
-        });
-        </script>
+         // Get the modal
+var modal = document.getElementsByClassName('bg-modal');
+
+// Get the button that opens the modal
+var btn = document.getElementsByClassName("modal-button");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal 
+btn[0].onclick = function() {
+    modal[0].style.display = "flex";
+}
+
+btn[1].onclick = function() {
+    modal[1].style.display = "flex";
+}
+// When the user clicks on <span> (x), close the modal
+span[0].onclick = function() {
+    modal[0].style.display = "none";
+}
+
+span[1].onclick = function() {
+    modal[1].style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+          </script>
+       
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script type="text/javascript" src="js/jquery-3.2.1.min.js"><\/script>')</script>
         <script type="text/javascript" src="js/script.js"></script>

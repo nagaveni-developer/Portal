@@ -174,7 +174,7 @@
                     <a  href="student.php">
                     <img src="images/examination.jpg" style="width:100%;">
                         
-                            <div  class="text" title="Open">Examination Branch</div>
+                            <div  class="text" title="Open" style="color:black;">Examination Branch</div>
                         
                     </a>
                 </div>
