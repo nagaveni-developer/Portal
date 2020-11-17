@@ -38,7 +38,7 @@
 	overflow:hidden;
 	border-radius:3px;
     color:white;
-	background:#4ca4b9;
+	background:#b3ffb3;
 
 	box-shadow:0 17px 50px 0 rgba(0,0,0,.19),0 12px 15px 0 rgba(0,0,0,.24);
 }
@@ -46,7 +46,7 @@
 	padding : 20px;
 }
 .accordion>a{
-	color:#374046;
+	color:black;
 	padding:15px;
 	display:block;
 	text-decoration:none;
@@ -58,10 +58,11 @@
 }
 .accordion>a:hover,
 .accordion>a.active{
-	background:#067996;
+	background:#004d00;
+        color:white;
 }
 .accordion>a.active{
-	color:#ffffff;
+	color:white;
 }
 .accordion>a>.alert-numb,
 .accordion>.sub-nav>a>.alert-numb{
@@ -74,11 +75,12 @@
 	line-height:22px;
 	border-radius:15px;
 	text-align:center;
-	background:#036c96;
+	background:#004d00;
 }
 .accordion>a.active>.alert-numb,
 .accordion>.sub-nav>a.active>.alert-numb{
-	background:#0583b4;
+	background:#b3ffb3;
+        color: black;
 }
 .accordion .sub-nav{
 	display:none;
@@ -131,7 +133,8 @@
 	border:4px solid #fff;
 	box-shadow:0 6px 20px 0 rgba(0,0,0,.19),0 8px 17px 0 rgba(0,0,0,.2);
 	background:url(https://pbs.twimg.com/profile_images/764041688243376128/cXFgS1TO_400x400.jpg) no-repeat center;
-	background-size: cover;
+        background-attachment: fixed;
+       background-size: 100% 100%;
 }
 .accordion .about-me .photo .photo-overlay{
 	top:0;
