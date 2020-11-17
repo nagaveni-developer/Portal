@@ -126,7 +126,7 @@
                    <div class="close">x</div>
                    <center>
                    <br>
-                   <h2 style=" color: #63CFB6;">Allotment Order</h2><br>
+                   <h2 style=" color: black;">Allotment Order</h2><br>
                    <br>
                    </center>
                    <p style="color:black;">
@@ -145,7 +145,7 @@
                    <div class="close">x</div>
                    <center>
                    <br>
-                   <h2 style=" color: #63CFB6;">Bonofied</h2><br>
+                   <h2 style=" color: black;">Bonofied</h2><br>
                    <br>
                    </center>
                    <p style="color:black;">

@@ -95,6 +95,19 @@ a li:hover{
     color: white;
     border-bottom: solid 6px #ccffcc;
 }/*modal section*/
+.modal-button{
+    background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+    
+}
 
 .bg-modal{
     width:100%;
@@ -667,14 +680,16 @@ small#ans{
     line-height: 37px;
     padding: 0px 25px;
     color: white;
-    background:#417182;
+    background:black;
     border: none;
     border-radius: 2px;
 }
 .up-in:hover,select:hover{
     cursor: pointer;
-    box-shadow: 0px 0px 3px white;
-	 color: rgb(13, 48, 65);
+    box-shadow: 0px 3px 5px black;
+     color: black;
+     background:white;
+    
 }
 
 #button-block{

@@ -34,11 +34,14 @@
             <a href="direct.php"><li id="home">Request</li></a>
             <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
             <a href="logout.php"><li>Log Out</li></a>
+            <?php
+                }
+            ?>
         </ul>
         <!-- content -->
         <div id="content">
            
-            <form action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
                 <center>
                 <h2 style="color:black;">Choose the Document</h2><br>
                     
@@ -59,7 +62,7 @@
                    <div class="close">x</div>
                    <center>
                    <br>
-                   <h2 style=" color: #63CFB6;">Renewal</h2><br>
+                   <h2 style=" color: black;">Renewal</h2><br>
                    <br>
                    </center>
                    <p style="color:black;">
@@ -78,13 +81,17 @@
                    <div class="close">x</div>
                    <center>
                    <br>
-                   <h2 style=" color: #63CFB6;">Lost MEMO</h2><br>
+                   <h2 style=" color: black;">Lost MEMO</h2><br>
                    <br>
                    </center>
                    <p style="color:black;">
                    1. Reason for application.<br>
                    2. Click proceed.<br>
-                   3. Submit the previous Semester MEMO copy.<br>
+                   3. Submit the previous Semester MEMO copy.<br><br>
+                   <input type="file" name="image" id="file">
+                   <input type="submit" value="Upload File" name="submit"><br><br>
+
+                   
                    4. After Submitting documents pay 500/-.
                    <br><br>
                    </p>
