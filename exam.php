@@ -70,13 +70,13 @@ button:hover, a:hover {
 <a href="exam_comp.php"><button type="button">completed</button></a>
 </div>
 <div class="card">
-  <form action="mail.php" method="post">
+  <form action="admin_mail.php" method="post">
   <h3>Name : John Doe</h3>
   <p>Year : 2</p>
   <p>Branch : CSE</p>
   <p>Requested Doc. : Lost Memo</p>
   <p>Date : 11-10-2020</p>
-  <button type="button">Upload Doc.</button>
+  <br><input type="file" name="image" id="file">
   <input type="submit" value="submit" name="submit">
   </form> 
 </div>

@@ -95,7 +95,7 @@
         <!-- content -->
         <div id="content">
 
-        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <form action="student_mail.php" method="post">
             <center>
                <!-- <div class="row">
                     <div class="column">
@@ -138,7 +138,7 @@
                    <br>
                    </p>
                    <center>
-                   <div class="buttons" ><input type="button" value="Proceed to Pay" id="proceed" class="up-in"></div>
+                   <div class="buttons" ><input type="submit" value="Proceed to Pay" name="submit" class="up-in"></div>
                   </center>
                    </div>
                </div>
@@ -157,9 +157,9 @@
                    <br><br>
                    </p>
                    <center>
-                  
+                   
 
-                   <div class="buttons" ><input type="button" value="Proceed" id="proceed" class="up-in"></div>
+                   <div class="buttons" ><input type="submit" value="submit" name="submit" class="up-in"></div>
                   </center>
                    </div>
                </div>

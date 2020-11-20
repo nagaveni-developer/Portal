@@ -17,6 +17,13 @@
         <link type="text/css" rel="stylesheet" href="fonts/font.css">
         <style>
 *,:after,:before{box-sizing:border-box}
+body{
+	width: 100%;
+  height: 670px;;
+  background-size: cover;
+  background-repeat:repeat;
+  
+}
 .pull-left{float:left}
 .pull-right{float:right}
 .clearfix:after,.clearfix:before{content:'';display:table}
