@@ -1,11 +1,11 @@
 <?php
-   if(isset($_FILES['image'])){
+   if(isset($_FILES['image1'])){
       $errors= array();
-      $file_name = $_FILES['image']['name'];
-      $file_size = $_FILES['image']['size'];
-      $file_tmp = $_FILES['image']['tmp_name'];
-      $file_type = $_FILES['image']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+      $file_name = $_FILES['image1']['name'];
+      $file_size = $_FILES['image1']['size'];
+      $file_tmp = $_FILES['image1']['tmp_name'];
+      $file_type = $_FILES['image1']['type'];
+      $file_ext=strtolower(end(explode('.',$_FILES['image1']['name'])));
       
       $expensions= array("jpeg","jpg","png","pdf");
       
@@ -24,6 +24,31 @@
          print_r($errors);
       }
    }
+   else if(isset($_FILES['image2'])){
+    $errors= array();
+    $file_name = $_FILES['image2']['name'];
+    $file_size = $_FILES['image2']['size'];
+    $file_tmp = $_FILES['image2']['tmp_name'];
+    $file_type = $_FILES['image2']['type'];
+    $file_ext=strtolower(end(explode('.',$_FILES['image2']['name'])));
+    
+    $expensions= array("jpeg","jpg","png","pdf");
+    
+    if(in_array($file_ext,$expensions)=== false){
+       $errors[]="extension not allowed, please choose a PDF, JPEG or PNG file.";
+    }
+    
+    if($file_size > 2097152) {
+       $errors[]='File size must be excatly 2 MB';
+    }
+    
+    if(empty($errors)==true) {
+       move_uploaded_file($file_tmp,"uploads/".$file_name); //The folder where you would like your file to be saved
+       echo "Success";
+    }else{
+       print_r($errors);
+    }
+ }
 
 // PHPMailer script below
 

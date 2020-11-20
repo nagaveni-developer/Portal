@@ -70,7 +70,7 @@
                    2. Upload Prevous year MEMO, Income Affidavit,College bonofied.<br>
                    3. Submit the soft copy of attachments.
                    <br><br>
-                   <input type="file" name="image" id="file">
+                   <input type="file" name="image1" id="file">
                    <input type="submit" value="Upload File" name="submit"><br><br>
                    </p>
                    <center>
@@ -90,7 +90,7 @@
                    1. Reason for application.<br>
                    
                    2. Submit the previous Semester MEMO copy.<br><br>
-                   <input type="file" name="image" id="file">
+                   <input type="file" name="image2" id="file">
                    <input type="submit" value="Upload File" name="submit"><br><br>
 
                    
