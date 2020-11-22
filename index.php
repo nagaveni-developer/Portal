@@ -89,7 +89,7 @@
             <?php
                 if(! isset($_SESSION['user'])){
             ?>
-            <a href="login.php"><li  id="home">Log In</li></a>
+            <a href="index.php"><li  id="home">Log In</li></a>
             <a href="signup.php"><li>Sign Up</li></a>
             <?php
                 }

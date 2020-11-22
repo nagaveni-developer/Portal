@@ -2,7 +2,7 @@
     session_start();
     include("connect.php");
     if(! isset($_SESSION['user']))
-        header("Location: login.php");
+        header("Location: index.php");
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,4 +1,7 @@
 <?php
+function alert($msg) {
+   echo "<script type='text/javascript'>alert('$msg');</script>";
+   }
    if(isset($_FILES['image1'])){
       $errors= array();
       $file_name = $_FILES['image1']['name'];
@@ -39,7 +42,7 @@
     }
     
     if($file_size > 2097152) {
-       $errors[]='File size must be excatly 2 MB';
+       $errors[]='File size must be exactly 2 MB';
     }
     
     if(empty($errors)==true) {
@@ -116,6 +119,7 @@ echo"\ninside session block \n user=".$user;
 
                 $user = $row['username'];
 echo "\nusername : ".$user; 
+                
                 $pass = $row['password'];
                 $year= $row['year'];
                 $branch=$row['branch'];
@@ -125,7 +129,7 @@ echo "\nusername : ".$user;
             }
 
             
-$query="insert into data(name,rollno,branch,year,file)values('$name','$user','$branch',$year,'$file_name')";
+$query="insert into data(name,rollno,branch,year,mail,file)values('$name','$user','$branch',$year,'$email', '$file_name')";
      
  if(mysqli_query( $conn, $query))
 {
