@@ -368,26 +368,7 @@ body{
 				   <a href="#">Requested<span class="pull-right alert-numb">0</span></a>
 				<a href="#">Applied <span class="pull-right alert-numb">0</span></a>
 			</div>
-          <p >
-                    <?php
-                    $p=$_SESSION["user"];
-                    $query = "select question from quans where askedby='$p'";
-                    $result = mysqli_query( $conn, $query);
-                    if(mysqli_error($conn)){
-                      echo "<script>window.alert('Something Went Wrong. Try Again');</script>";
-                      }
-                      else if( mysqli_num_rows($result) > 0 )
-                      {
-                        $count=1;
-                        while( $row = mysqli_fetch_assoc($result) ){
-                          echo $count.". ".$row['question']."\n";
-			  echo "<br>";
-                          $count=$count+1;
-                        }
-			echo "<br>";
-                      }
-                     ?>
-                     </p>
+          
                      <br>
                      
 
