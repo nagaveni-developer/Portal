@@ -152,6 +152,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `year`, `branch`, `name`, `email`, `join_date`, `category`) VALUES
+(70, 'user', '$2y$10$b7RBlEP/HEv.k6A5hRlfpena00Rp6b3fRt4FhM0QcmIOyrzNeB01i', '3','cse','Nagaveni','chambetinagaveni1@gmail.com','2020-09-07',NULL),
 (17, 'admin', '$2y$10$P8b3vf6Z9U81CyDhoe4XhOglpC6BNPmpwoY46oxCyuXB4P0JDLDEG', '1', 'cse', 'Developer', 'vcequries82@gmail.com', '2017-04-11', NULL),
 (69, 'akhila_3103', '$2y$10$jR2KMRZbXMv50ePUXBWBje2aZQudpx94B3UgppJYcn1PqQwAdQKPi', '2nd', 'Cse', 'Analdas Akhila', 'akhila.analdas03@gmail.com', '2020-09-07', 'CSE,IT,Soft Skills,Placement,');
 
