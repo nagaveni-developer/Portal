@@ -6,16 +6,12 @@ function alert($msg) {
 if(isset($_POST["submit"]))
 {
 require_once 'mailer/class.phpmailer.php';
-$format="SELECT * FROM data WHERE mail like '%".$_POST["mail"]."%'";
-$r = $conn->query($format);
 $mail = new PHPMailer(true);
-$row = mysqli_fetch_assoc($r);
  
 
 try
  {
-         
-        $email=$row["mail"];
+          $email=$_POST["mail"];
           $mail->IsSMTP();
           $mail->isHTML(true);
           $mail->SMTPDebug  = 0;
@@ -154,7 +150,7 @@ include("connect.php");
 $mail=$row['mail'];
 ?>
                 <div class="card">
-          <form id="f<?php echo $n; ?>"  action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
+          <form id="<?php echo $n; ?>"  action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
 <?php        
 echo"<br>*********<br>";
          echo "Name : ".$name. "<br>";
@@ -164,10 +160,11 @@ echo"<br>*********<br>";
         echo "Doc required : ".$doc. "<br>";
        echo "Date : ".$date. "<br>";
       ?>
-      <input type="submit" value="submit" name="submit" id="ar<?php echo $n;?>"> </form>
+      <input type="submit" value="submit" name="submit" id="<?php echo $n;?>"> </form>
       <?php
        echo"<br>*********<br>";
        $n++;
+       echo $n;
           }          
   }
        
