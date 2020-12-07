@@ -88,6 +88,7 @@ if(isset($_POST['sub']))
                 }
                 else{
             ?>
+            <a href="direct.php"><li id="home">Request</li></a>
             <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
             <a href="logout.php"><li>Log Out</li></a>
             <?php
@@ -108,7 +109,8 @@ if(isset($_POST['sub']))
 	<th>Book_id</th>
 	<th>Title</th>
 	<th>Author</th>
-	
+	<th>No of Copies</th>
+    <th>Request</th>
 </tr>
 <?php 
 while ($row=mysqli_fetch_assoc($res)) {
@@ -117,12 +119,32 @@ while ($row=mysqli_fetch_assoc($res)) {
 		<td><?php echo $row['Book_id']?></td>
 		<td><?php echo $row['Title']?></td>
 		<td><?php echo $row['Author_name']?></td>
+        <td><?php echo $row['No_of_copies']?></td>
+        <td>
+        <button type="button" id="<?php echo $row['Book_id'];?>" 
+                data-user="<?php echo $_SESSION['user'];?>" 
+                data-bookID="<?php echo $row['Book_id'];?>"
+                data-bookTitle="<?php echo $row['Title'];?> "
+                style="background:#090;" onClick="request(this.id)">Request</button>
+        </td>
 	</tr>
 <?php
 }
  ?>
 </table>
 </center>
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	function request(buttonID){
+		var button=document.getElementById(buttonID);
+        var userreq = button.getAttribute("data-user");
+		var bookID = button.getAttribute("data-bookID");
+		var bookTitle = button.getAttribute("data-bookTitle");
+		
+		window.location.href = 'requestbook.php?bookID=' + bookID + '&userreq=' + userreq + '&bookTitle=' + bookTitle; 
+	}
+	</script>
 
         <!-- Footer -->
         <div id="footer">
