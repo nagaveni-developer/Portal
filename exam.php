@@ -3,7 +3,8 @@
 function alert($msg) {
   echo "<script type='text/javascript'>alert('$msg');</script>";
   }
-if(isset($_POST["submit"]))
+  include('connect.php');
+if(isset($_GET["mail"])&&isset($_GET["flag"]))
 {
 require_once 'mailer/class.phpmailer.php';
 $mail = new PHPMailer(true);
@@ -11,7 +12,7 @@ $mail = new PHPMailer(true);
 
 try
  {
-          $email=$_POST["mail"];
+          $email=$_GET["mail"];
           $mail->IsSMTP();
           $mail->isHTML(true);
           $mail->SMTPDebug  = 0;
@@ -31,22 +32,27 @@ $mail->Password   ="VceQueries@123";
 
   if($mail->Send())
         {
-      $msg ="Mail sent...... ";
+      
+      include('connect.php');
+      $query ="UPDATE data SET flag = 1 WHERE mail = '$email'";  
+      mysqli_query($conn,$query);
+      $msg ="Mail sent";
       echo $msg;
+
        }
                                    
       else {
        echo "Mail not sent";
               }                  
- }  
-                                    catch(phpmailerException $ex)
-    {
-  $msg = "<div class='alert alert-warning'>".$ex->errorMessage()."</div>";
-    alert($msg);
-   }
 
+}  
+catch(phpmailerException $ex)
+{
+$msg = "<div class='alert alert-warning'>".$ex->errorMessage()."</div>";
+alert($msg);
 }
 
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -136,7 +142,7 @@ include("connect.php");
  
  else if( mysqli_num_rows($result) > 0 )
  {
-   $n=1;
+  
    while( $row = mysqli_fetch_assoc($result) )
         {
 
@@ -148,9 +154,10 @@ include("connect.php");
                 $doc= $row['doc_req'];
                 $date = $row['date'];
 $mail=$row['mail'];
+$flag=$row['flag'];
 ?>
                 <div class="card">
-          <form id="<?php echo $n; ?>"  action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="post" enctype="multipart/form-data">
+          <form id="<?php echo $mail; ?>"  action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="get" enctype="multipart/form-data">
 <?php        
 echo"<br>*********<br>";
          echo "Name : ".$name. "<br>";
@@ -160,11 +167,12 @@ echo"<br>*********<br>";
         echo "Doc required : ".$doc. "<br>";
        echo "Date : ".$date. "<br>";
       ?>
-      <input type="submit" value="submit" name="submit" id="<?php echo $n;?>"> </form>
+      <button id="<?php echo $roll.$mail?>" 
+              type="button" data-mail="<?php echo $mail;?>"
+              data-flag="<?php echo $flag;?>"
+              onClick="checkMail(this.id)">Submit</button>
       <?php
        echo"<br>*********<br>";
-       $n++;
-       echo $n;
           }          
   }
        
@@ -175,8 +183,19 @@ else
        
 ?>
  
- 
+ </form>
 </div>
 </body>
+<script>
+	function checkMail(buttonID){
+		var button=document.getElementById(buttonID);
+    var mail = button.getAttribute("data-mail");
+    var flag = button.getAttribute("data-flag");
+
+    console.log(mail);
+		window.location.href = 'exam.php?mail=' + mail+'&flag='+flag; 
+  }
+
+	</script>
 </html>
 

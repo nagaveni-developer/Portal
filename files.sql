@@ -86,12 +86,7 @@ CREATE TABLE `data` (
 --
 
 INSERT INTO `data` (`rollno`, `name`, `year`, `branch`, `mail`, `doc_req`, `file`, `date`, `flag`) VALUES
-('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', '', 0x73756e7365742d6269726473312e6a7067, '2020-11-24 10:27:48', 0),
-('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', 'renewal', 0x6f72616e67652d73756e7365742e6a7067, '2020-11-24 10:58:39', 0),
-('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', 'renewal', 0x6f72616e67652d73756e7365742e6a7067, '2020-11-24 11:02:55', 0),
-('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', 'renewal', 0x6f72616e67652d73756e7365742e6a7067, '2020-11-24 11:07:22', 0),
-('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', '', 0x6f72616e67652d73756e7365742e6a7067, '2020-11-24 11:08:08', 0),
-('priya1', 'keerthi priya', 2, 'cse', 'keerthipriya1438@gmail.com', '', 0x326e642d73656d2d6d61726b2d73686565742e706466, '2020-11-24 15:20:06', 0);
+('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', '', 0x73756e7365742d6269726473312e6a7067, '2020-11-24 10:27:48', 0);
 
 -- --------------------------------------------------------
 

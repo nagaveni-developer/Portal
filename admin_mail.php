@@ -1,16 +1,22 @@
 @@ -1,48 +0,0 @@
-
+<!DOCTYPE html>
+<head>
+</head>
+<body>
 <?php
-if(isset($_POST["submit"]))
+function alert($msg) {
+  echo "<script type='text/javascript'>alert('$msg');</script>";
+  }
+if(isset($_GET["email"]))
 {
-echo "keerthi";
+echo "keer";
 require_once 'mailer/class.phpmailer.php';
 $mail = new PHPMailer(true);
   
 
 try
  {
-          $email="keerthipriya1438@gmail.com";
+          $email=$_GET["email"];
           $mail->IsSMTP();
           $mail->isHTML(true);
           $mail->SMTPDebug  = 0;
@@ -47,3 +53,5 @@ $mail->Password   ="VceQueries@123";
 }
 
 ?>
+</body>
+</html>
