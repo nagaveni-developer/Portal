@@ -180,7 +180,7 @@
                 </div>
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 2</div>
-                    <a href="">
+                    <a href="allbooks.php">
                        <img src="images/library.jpg" style="width:100%;">
                             <div class="text" title="Open">Library Mangement</div>
                        

@@ -29,6 +29,13 @@ if(isset($_POST['sub']))
         <link type="text/css" rel="stylesheet" href="css/material.css">
 	
 		<style>	
+		body{
+	width: 100%;
+  height: 670px;;
+  background-size: cover;
+  background-repeat:repeat;
+  
+}
 		a{
 		     text-decoration: none;
 			}
@@ -36,6 +43,28 @@ if(isset($_POST['sub']))
 			display:inline-block;
         padding:17px;
 		}
+		#books_table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#books_table td, #books_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#books_table tr:nth-child(even){background-color: #f2f2f2;}
+#books_table tr:nth-child(odd){background-color: rgb(255,255,255,0.5);}
+
+#books_table tr:hover {background-color: #ddd;}
+
+#books_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(0,0,0,0.5);
+  color: white;
+}
 		</style>
 </head>
 
@@ -70,7 +99,7 @@ if(isset($_POST['sub']))
 <input type="text" name="search" placeholder="Enter C no " id="search">
 <button name="sub" id="sub">submit</button><br><br>
 </form>
-<table >
+<table id="books_table">
 <tr>
 	<th>Book ID</th>
 	<th>Title</th>
@@ -90,5 +119,10 @@ while ($row=mysqli_fetch_assoc($res)) {
  ?>
 </table>
 </center>
+
+        <!-- Footer -->
+        <div id="footer">
+            &copy; 2020 &bull; VCE Portal.
+        </div>
 </body>
 </html>

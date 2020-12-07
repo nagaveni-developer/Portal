@@ -1,6 +1,9 @@
 <?php
     session_start();
 	include("connect.php");
+	if(! isset($_SESSION['user'])){
+        header("Location: index.php");
+    }
 $query="select * from book";
 $res=mysqli_query($conn,$query);
 
@@ -21,8 +24,21 @@ if(isset($_POST['sub']))
 <!DOCTYPE html>
 <html>
 <head>
+		<title> VCE Portal </title>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/material.css">
+        <link type="text/css" rel="stylesheet" href="fonts/font.css">
+        <link rel="icon" href="images/icon1.png" >
         
 		<style>	
+        body{
+	width: 100%;
+  height: 670px;;
+  background-size: cover;
+  background-repeat:repeat;
+  
+}
 		a{
 		     text-decoration: none;
 			}
@@ -30,17 +46,64 @@ if(isset($_POST['sub']))
 			display:inline-block;
         padding:17px;
 		}
+		#books_table {
+  border-collapse: collapse;
+  width: 70%;
+}
+
+#books_table td, #books_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#books_table tr:nth-child(even){background-color: #f2f2f2;}
+#books_table tr:nth-child(odd){background-color: rgb(255,255,255,0.5);}
+
+#books_table tr:hover {background-color: #ddd;}
+
+#books_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(0,0,0,0.5);
+  color: white;
+}
 		</style>
-<body>
+</head>
+
+<body id="_5">
+ <!-- navigation bar -->
+        
+ 			<div id="log"><br>
+                <div id="ntro" style="color:white;"><b>VCE Portal</b></div>
+            </div>
+    
+        <ul id="nav-bar">
+            <?php
+                if(! isset($_SESSION['user'])){
+            ?>
+            <a href="login.php"><li  id="home">Log In</li></a>
+            <a href="signup.php"><li>Sign Up</li></a>
+            <?php
+                }
+                else{
+            ?>
+            <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
+            <a href="logout.php"><li>Log Out</li></a>
+            <?php
+                }
+            ?>
+        </ul>
+
 	<center>
 <form action="searchbook.php" method="post">
 <input type="text" name="search" placeholder="Enter C no " id="search">
-<button name="sub" id="sub">submit</button><br><br><br>
+<div id="button-block">
+<div class="buttons"><button name="sub" id="sub">submit</button></div><br><br><br>
+</div>
 </form>
-</head>
 	
-<body>
-<table >
+<table id="books_table">
 <tr>
 	<th>Book_id</th>
 	<th>Title</th>
@@ -60,5 +123,10 @@ while ($row=mysqli_fetch_assoc($res)) {
  ?>
 </table>
 </center>
+
+        <!-- Footer -->
+        <div id="footer">
+            &copy; 2020 &bull; VCE Portal.
+        </div>
 </body>
 </html>
