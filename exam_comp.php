@@ -67,7 +67,7 @@ button:hover, a:hover {
 <div class="log">
 <a href="logout.php"><button type="button">logout</button> </a>
 <br>
-<a href="exam_comp.php"><button type="button">completed</button></a>
+<a href="exam.php"><button type="button">Pending</button></a>
 </div>
 
 

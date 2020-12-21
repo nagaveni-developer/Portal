@@ -40,7 +40,16 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`Book_id`, `Title`, `Author_name`, `No_of_copies`) VALUES
-('1001', 'Programmable Logic Controllers Principles and Applications', 'John Webb W', 7);
+('1001', 'Programmable Logic Controllers Principles and Applications', 'John Webb W', 7),
+('1016', 'Basic and applied Soil Mechanics', 'Ranjan Gopal',12),
+('1023', 'An engineering approach to Computer Networking', 'Keshav',2),
+('1027', 'Computer System Architecture', 'Morris Mano M',3),
+('1032', 'Python Programming using problem solving approach', 'Reema Theraja',34),
+('1035', 'Analog and Digital communications  HWEI P HSU', 'DEBJANI MITRA',43),
+('1042', 'Introduction to Machine Learning', 'Alpaydin Ethem',7),
+('1054', 'Cyber Security', 'Nina Godbole',22),
+('1076', 'Cryptography and Network Security', 'W. Stallings',76),
+('1100', 'Cloud Computing concepts Technology & Architecture', 'Thomoas Erl',48);
 
 -- --------------------------------------------------------
 
@@ -60,7 +69,8 @@ CREATE TABLE `borrower` (
   `Book_id` varchar(10) NOT NULL,
   `Date_out` date NOT NULL,
   `Due_date` date NOT NULL,
-  `Date_in` date NOT NULL
+  `Date_in` date NOT NULL,
+  `flag` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -150,7 +160,7 @@ ALTER TABLE `book`
 -- Indexes for table `borrower`
 --
 ALTER TABLE `borrower`
-  ADD UNIQUE KEY `UniqueBorrower` (`username`,`email`),
+  ADD UNIQUE KEY `UniqueBorrower` (`username`,`Book_id`),
   ADD KEY `BorrowerBookID` (`Book_id`);
 
 --

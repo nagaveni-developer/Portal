@@ -1,11 +1,12 @@
-
 <?php
 function alert($msg) {
   echo "<script type='text/javascript'>alert('$msg');</script>";
   }
-if(isset($_POST["submit"]))
+  session_start();
+  include("connect.php");
+if(isset($_GET["bookID"]))
 {
-
+ $Book_id = $_GET["bookID"];
 require_once 'mailer/class.phpmailer.php';
 $mail = new PHPMailer(true);
   
@@ -21,35 +22,20 @@ try
           $mail->Host       = "smtp.gmail.com";
           $mail->Port        = '465';
           $mail->AddAddress($email);
-$mail->Username="vasaviportal@gmail.com";
-$mail->Password   ="VCEportal";
-                                     $mail->SetFrom('vasaviportal@gmail.com','VCE Adminstrative branch');
-                                     $mail->AddReplyTo('vasaviportal@gmail.com','VCE Adminstrative branch');
+          $mail->Username="vasaviportal@gmail.com";
+          $mail->Password   ="VCEportal";
+          $mail->SetFrom('vasaviportal@gmail.com','Library VCE Adminstrative branch');
+          $mail->AddReplyTo('vasaviportal@gmail.com','Library VCE Adminstrative branch');
 
  $mail->Subject = "VCE Adminstrative branch ";
- $mail->Body    = "Hello Admin! There is a request from a student,  please visit the website to check the student application form ";
+ $mail->Body    = "Hello Admin! There is a BOOK request from a student,  please visit the website to view the student request ";
        
-
+ echo $Book_id;
   if($mail->Send())
         {
       $msg =" Mail sent...... ";
       echo $msg; 
-       }
-                                   
-      else {
-       echo "Mail not sent";
-              }                   
- }  
-                                    catch(phpmailerException $ex)
-    {
-  $msg = "<div class='alert alert-warning'>".$ex->errorMessage()."</div>";
-    alert($msg);
-   }
-
-}
-session_start();
-include("connect.php");
-
+      include('connect.php');
     if( isset($_SESSION['user']))
 {
      $user=$_SESSION['user'];
@@ -65,18 +51,18 @@ echo"\ninside session block \n user=".$user;
             while( $row = mysqli_fetch_assoc($result) ){
 
                 $user = $row['username'];
-echo "\nusername : ".$user; 
+                echo "\nusername : ".$user; 
                 
                 $pass = $row['password'];
                 $year= $row['year'];
                 $branch=$row['branch'];
                 $name = $row['name'];
                 $email = $row['email'];
-                $date = $row['join_date'];
+               
             }
 
             
-$query="insert into data(name,rollno,branch,year,mail)values('$name','$user','$branch',$year,'$email')";
+$query="insert into borrower(name,username,branch,year,email,Book_id)values('$name','$user','$branch',$year,'$email',$Book_id)";
      
  if(mysqli_query( $conn, $query))
 {
@@ -94,4 +80,17 @@ echo mysqli_error($conn);
         }
         mysqli_close($conn);
     }
+  }
+                                   
+  else {
+   echo "Mail not sent";
+          }                  
+
+}  
+catch(phpmailerException $ex)
+{
+$msg = "<div class='alert alert-warning'>".$ex->errorMessage()."</div>";
+alert($msg);
+}
+}
 ?>

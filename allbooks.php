@@ -146,9 +146,6 @@ while ($row=mysqli_fetch_assoc($res)) {
 	}
 	</script>
 
-        <!-- Footer -->
-        <div id="footer">
-            &copy; 2020 &bull; VCE Portal.
-        </div>
+    
 </body>
 </html>

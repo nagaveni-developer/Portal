@@ -1,60 +1,4 @@
-<?php
-    session_start();
-    include("connect.php");
-    if(! isset($_SESSION['user'])){
-        header("Location: login.php");
-    }
 
-    if( isset( $_POST["submit"] ) )
-    {
-
-        function valid($data){
-            $data=trim(stripslashes(htmlspecialchars($data)));
-            return $data;
-        }
-
-        $inuser = valid( $_POST["username"] );
-        $inkey = valid( $_POST["password"] );
-
-        include("connect.php");
-
-        $query = "SELECT * FROM users WHERE username='$inuser'";
-        echo $inuser;
-        $result = mysqli_query( $conn, $query);
-        if(mysqli_error($conn)){
-            echo "<script>window.alert('Something Went Wrong. Try Again');</script>";
-        }
-        else if( mysqli_num_rows($result) > 0 )
-        {
-            while( $row = mysqli_fetch_assoc($result) ){
-                $user = $row['username'];
-                $pass = $row['password'];
-                $year= $row['year'];
-                $branch=$row['branch'];
-                $name = $row['name'];
-                $email = $row['email'];
-                $date = $row['join_date'];
-            }
-
-            if( password_verify( $inkey, $pass ) ){
-                $_SESSION['user'] = $user;
-                $_SESSION['name'] = $name;
-                $_SESSION['year']=$year;
-                $_SESSION['branch']=$branch;
-                $_SESSION['email'] = $email;
-                $_SESSION['date'] = $date;
-                header('Location: index.php');
-            }
-            else{
-                echo "<script>window.alert('Wrong Username or Password Combination. Try Again');</script>";
-            }
-        }
-        else{
-            echo "<script>window.alert('No Such User exist in database');</script>";
-        }
-        mysqli_close($conn);
-    }
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +22,7 @@
             <?php
                 if(! isset($_SESSION['user'])){
             ?>
-            <a href="login.php"><li  id="home">Log In</li></a>
+            <a href="index.php"><li  id="home">Log In</li></a>
             <a href="signup.php"><li>Sign Up</li></a>
             <?php
                 }
@@ -110,7 +54,7 @@ if (isset($_GET['bookID']) && isset($_GET['userreq']) && isset($_GET['bookTitle'
 	?>
 
 <!-- Pre-filled Book Search Form based on search-->
-	<form class="form-horizontal" action="requestbook.php" method="get">
+	<form class="form-horizontal" action="lib_student_mail.php" method="get">
     <center>
             <label for="userreq">User Name</label>
                 <input type="text" id="userreq" name="userreq" placeholder="Enter username"
@@ -122,7 +66,9 @@ if (isset($_GET['bookID']) && isset($_GET['userreq']) && isset($_GET['bookTitle'
                 <input type="text" id="bookTitle" name="bookTitle" placeholder="Enter Book Title"
                   value="<?php echo $bookTitle?>">
             
-                <button type="submit" >Request</button>
+                <button id="<?php echo $bookID?>" 
+                        data-bookID="<?php echo $bookID;?>"
+                        onClick="checkBook(this.id)">submit</button>
     </center>
     </form>	
 
@@ -130,6 +76,17 @@ if (isset($_GET['bookID']) && isset($_GET['userreq']) && isset($_GET['bookTitle'
 }
 ?>
 </body>
+<script>
+	function checkBook(buttonID){
+		var button=document.getElementById(buttonID);
+        var bookID = button.getAttribute("data-bookID");
+        
+
+    console.log(mail);
+		window.location.href = 'lib_student_mail.php?Book_id=' + bookID; 
+  }
+
+	</script>
 <!-- Footer -->
 <div id="footer">
             &copy; 2020 &bull; VCE Portal.

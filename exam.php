@@ -21,10 +21,10 @@ try
           $mail->Host       = "smtp.gmail.com";
           $mail->Port        = '465';
           $mail->AddAddress($email);
-$mail->Username="vcequeries82@gmail.com";
-$mail->Password   ="VceQueries@123";
-                                     $mail->SetFrom('vcequeries82@gmail.com','VCE Adminstrative branch');
-                                     $mail->AddReplyTo('vcequeries82@gmail.com','VCE Adminstrative branch');
+$mail->Username="vasaviportal@gmail.com";
+$mail->Password   ="VCEportal";
+                                     $mail->SetFrom('vasaviportal@gmail.com','Keerthi Priya');
+                                     $mail->AddReplyTo('vasaviportal@gmail.com','Keerthi Priya');
 
  $mail->Subject = "VCE Adminstrative branch ";
  $mail->Body    = "Hello! Your doucument has been approved,  please visit the website to check the status of ur application form ";
