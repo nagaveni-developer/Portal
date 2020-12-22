@@ -3,6 +3,10 @@
 function alert($msg) {
   echo "<script type='text/javascript'>alert('$msg');</script>";
   }
+
+    include("connect.php");
+    if(! isset($_SESSION['user']))
+        header("Location: index.php");
   include('connect.php');
 if(isset($_GET["email"])&&isset($_GET["flag"]))
 {
@@ -23,10 +27,10 @@ try
           $mail->AddAddress($email);
 $mail->Username="vasaviportal@gmail.com";
 $mail->Password   ="VCEportal";
-                                     $mail->SetFrom('vasaviportal@gmail.com','Library Adminstrative Branch');
-                                     $mail->AddReplyTo('vasaviportal@gmail.com','Library Adminstrative Branch');
+          $mail->SetFrom('vasaviportal@gmail.com','Library Adminstrative Branch');
+          $mail->AddReplyTo('vasaviportal@gmail.com','Library Adminstrative Branch');
 
- $mail->Subject = "VCE Adminstrative branch ";
+ $mail->Subject = "Library Adminstrative branch ";
  $mail->Body    = "Hello! Please return the book on or before due date. Have a nice day:)";
        
 

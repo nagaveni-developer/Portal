@@ -46,7 +46,7 @@
 
         <form action="req_payment.php" method="get">
             <center>
-                            <h2 style="color:black;">Choose the Document</h2><br>
+                            <h2 style="color:black;">Select the Document</h2><br>
                  
                         <div class="modal-block">   
                         <div class="button-block">     
