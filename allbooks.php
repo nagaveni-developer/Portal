@@ -18,7 +18,6 @@ if(isset($_POST['sub']))
 	$query="select * from book where Book_id='$id'";
 	}
 	$res=mysqli_query($conn,$query);
-	// $row=mysqli_fetch_assoc($res);
 }
 ?>
 <!DOCTYPE html>
@@ -33,12 +32,11 @@ if(isset($_POST['sub']))
         
 		<style>	
         body{
-	width: 100%;
-  height: 670px;;
-  background-size: cover;
-  background-repeat:repeat;
-  
-}
+	    width: 100%;
+        height: 670px;;
+        background-size: cover;
+        background-repeat:repeat;
+        }
 		a{
 		     text-decoration: none;
 			}
@@ -47,9 +45,9 @@ if(isset($_POST['sub']))
         padding:17px;
 		}
 		#books_table {
-  border-collapse: collapse;
-  width: 70%;
-}
+        border-collapse: collapse;
+        width: 70%;
+        }
 
 #books_table td, #books_table th {
   border: 1px solid #ddd;
@@ -67,6 +65,18 @@ if(isset($_POST['sub']))
   text-align: left;
   background-color: rgb(0,0,0,0.5);
   color: white;
+}
+.subbtn{
+    border: 2px solid white;
+  outline: 0;
+  display : inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  font-size: 18px;
 }
 		</style>
 </head>
@@ -100,7 +110,7 @@ if(isset($_POST['sub']))
 <form action="searchbook.php" method="post">
 <input type="text" name="search" placeholder="Enter C no " id="search">
 <div id="button-block">
-<div class="buttons"><button name="sub" id="sub">submit</button></div><br><br><br>
+<div class="buttons"><button name="sub" class="subbtn" id="sub">submit</button></div><br><br><br>
 </div>
 </form>
 	

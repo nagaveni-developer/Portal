@@ -9,7 +9,7 @@ body{
     font-family: "Segoe UI",Arial,sans-serif;
     font-size: 15px;
     background-image: url("back.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width:100%;
     background-position: center;
     font-weight: 500;
@@ -469,13 +469,13 @@ input[type="password"]:hover{
 #algo{
     background: url();
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
    
 }
 #database{
     background: url();
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 300px;
    
 }

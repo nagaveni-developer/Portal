@@ -118,11 +118,14 @@ button:hover, a:hover {
 </head>
 <body>    
  
-<h2 style="text-align:center;color:#087D72;">Student Document Requests</h2>
+<h2 style="text-align:center;color:#087D72;">Library Branch : Student Document Requests</h2>
+<a href="exam.php"><button type="button" style="width:auto;">Examination Admin</button></a>
+<a href="insertdata.php"><button type="button" style="width:auto;">Insert Books Data</button></a>
+
 <div class="log">
 <a href="logout.php"><button type="button">logout</button> </a>
 <br>
-<!--<a href="exam_comp.php"><button type="button">completed</button></a>-->
+<a href="library_comp.php"><button type="button">completed</button></a>
 </div>
 
 
@@ -159,7 +162,7 @@ include("connect.php");
 <?php        
 echo"<br>*********<br>";
          echo "Name : ".$name. "<br>";
-        echo "Roll number : ".$username. "<br>";
+        echo "Username : ".$username. "<br>";
         echo "Year : ".$year. "<br>";
         echo "Branch : ".$branch. "<br>";
         echo "Doc required : ".$Book_id. "<br>";
@@ -167,7 +170,7 @@ echo"<br>*********<br>";
       <button id="<?php echo $username.$email?>" 
               type="button" data-mail="<?php echo $email;?>"
               data-flag="<?php echo $flag;?>"
-              onClick="checkMail(this.id)">Submit</button>
+              onClick="checkMail(this.id)">Notify</button>
       <?php
        echo"<br>*********<br>";
           }          

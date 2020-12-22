@@ -2,7 +2,7 @@
     session_start();
     include("connect.php");
     if(! isset($_SESSION['user']))
-        header("Location: login.php");
+        header("Location: index.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -139,7 +139,6 @@ body{
 	position:relative;
 	border:4px solid #fff;
 	box-shadow:0 6px 20px 0 rgba(0,0,0,.19),0 8px 17px 0 rgba(0,0,0,.2);
-	background:url(https://pbs.twimg.com/profile_images/764041688243376128/cXFgS1TO_400x400.jpg) no-repeat center;
         background-attachment: fixed;
        background-size: 100% 100%;
 }
@@ -365,7 +364,8 @@ body{
 			</div>
             <a href="#3"><i class="fa fa-history"></i> My Activity <span class="pull-right alert-numb">0</span></a>
 			<div class="sub-nav">
-				   <a href="#">Requested<span class="pull-right alert-numb">0</span></a>
+				   <a href="#">Requested<span class="pull-right alert-numb">0</span>
+                     <br></a>
 				<a href="#">Applied <span class="pull-right alert-numb">0</span></a>
 			</div>
           
@@ -375,7 +375,7 @@ body{
                 </div>
 		</div>         
         <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="http://code.jquery.com/jquery-plugins.js"></script>
+   
 <script>
         $(function(){
 	Profile.load();

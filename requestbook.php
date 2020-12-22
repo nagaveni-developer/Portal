@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    include("connect.php");
+    if(! isset($_SESSION['user']))
+        header("Location: index.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -8,6 +14,10 @@
         <link type="text/css" rel="stylesheet" href="css/material.css">
         <link type="text/css" rel="stylesheet" href="fonts/font.css">
         <link rel="icon" href="images/icon1.png" >
+        <style>
+        body{
+            background-repeat : repeat;
+        }
 		</style>
 </head>   
 
@@ -28,6 +38,7 @@
                 }
             else{
             ?>
+            <a href="direct.php"><li id="home">Request</li></a>
             <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
             <a href="logout.php"><li>Log Out</li></a>
             <?php

@@ -96,7 +96,7 @@ CREATE TABLE `data` (
 --
 
 INSERT INTO `data` (`rollno`, `name`, `year`, `branch`, `mail`, `doc_req`, `file`, `date`, `flag`) VALUES
-('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', '', 0x73756e7365742d6269726473312e6a7067, '2020-11-24 10:27:48', 0);
+('keerthi', 'keerthi priya', 2, 'CSE', 'keerthipriya1438@gmail.com', 'bonofied', 0x73756e7365742d6269726473312e6a7067, '2020-11-24 10:27:48', 0);
 
 -- --------------------------------------------------------
 

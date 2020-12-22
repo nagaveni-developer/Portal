@@ -72,13 +72,13 @@ try
           $mail->Host       = "smtp.gmail.com";
           $mail->Port        = '465';
           $mail->AddAddress($email);
-$mail->Username="vasaviportal@gmail.com";
-$mail->Password   ="VCEportal";
-$mail->addAttachment("uploads/".$file_name);   $mail->SetFrom('vasaviportal@gmail.com','VCE Adminstrative branch');
-                                     $mail->AddReplyTo('vasaviportal@gmail.com','VCE Adminstrative branch');
-
- $mail->Subject = "VCE Adminstrative branch ";
- $mail->Body    = "HI admin there is a request from a student,  please go through the below form ";
+          $mail->Username="vasaviportal@gmail.com";
+          $mail->Password   ="VCEportal";
+          $mail->addAttachment("uploads/".$file_name);   
+          $mail->SetFrom('vasaviportal@gmail.com','Examination Branch');
+         $mail->AddReplyTo('vasaviportal@gmail.com','Examination Branch');
+         $mail->Subject = "VCE Adminstrative branch ";
+         $mail->Body    = "Hi admin there is a request from a student,  please go through the below document ";
        
 
   if($mail->Send())

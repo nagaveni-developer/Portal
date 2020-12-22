@@ -9,11 +9,8 @@ function alert($msg) {
   }
 if(isset($_GET["email"]))
 {
-echo "keer";
 require_once 'mailer/class.phpmailer.php';
 $mail = new PHPMailer(true);
-  
-
 try
  {
           $email=$_GET["email"];
@@ -25,30 +22,27 @@ try
           $mail->Host       = "smtp.gmail.com";
           $mail->Port        = '465';
           $mail->AddAddress($email);
-$mail->Username="vasaviportal@gmail.com";
-$mail->Password   ="VCEportal";
-                                     $mail->SetFrom('vasaviportal@gmail.com','VCE Adminstrative branch');
-                                     $mail->AddReplyTo('vasaviportal@gmail.com','VCE Adminstrative branch');
-
- $mail->Subject = "VCE Adminstrative branch ";
- $mail->Body    = "Hello! Your doucument has been approved,  please visit the website to check the status of ur application form ";
-       
-
-  if($mail->Send())
-        {
-      $msg ="Mail sent...... ";
-      echo $msg; 
-       }
+          $mail->Username="vasaviportal@gmail.com";
+          $mail->Password   ="VCEportal";
+          $mail->SetFrom('vasaviportal@gmail.com','Examination Branch');
+          $mail->AddReplyTo('vasaviportal@gmail.com','Examination Branch');
+          $mail->Subject = "VCE Adminstrative branch ";
+          $mail->Body    = "Hello! Your doucument has been approved,  please visit the website to check the status of ur application form ";
+          if($mail->Send())
+          {
+          $msg ="Mail sent...... ";
+          echo $msg; 
+          }
                                    
-      else {
-       echo "Mail not sent";
-              }                   
+          else {
+          echo "Mail not sent";
+          }                   
  }  
-                                    catch(phpmailerException $ex)
+    catch(phpmailerException $ex)
     {
-  $msg = "<div class='alert alert-warning'>".$ex->errorMessage()."</div>";
+    $msg = "<div class='alert alert-warning'>".$ex->errorMessage()."</div>";
     alert($msg);
-   }
+    }
 
 }
 

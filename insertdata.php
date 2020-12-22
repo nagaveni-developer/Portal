@@ -1,6 +1,9 @@
-<?php
-session_start();
-  ?>
+  <?php
+    session_start();
+    include("connect.php");
+    if(! isset($_SESSION['user']))
+        header("Location: index.php");
+?>
 
 <?php
  include("connect.php");
@@ -10,18 +13,21 @@ if(isset($_POST['submit']))
 	$title=$_POST['con'];
     $author=$_POST['inc'];
     $copies=$_POST['cop'];
-			$sql = "INSERT INTO book (Book_id,Title,Author_name,No_of_copies)
+    $sql = "INSERT INTO book (Book_id,Title,Author_name,No_of_copies)
 		VALUES('$book_id','$title','$author',$copies)";
-			$current_id = mysqli_query($conn, $sql) or die("<b>Error:</b> Problem on Image Insert<br/>" . mysqli_error($conn));
-			if (isset($current_id)) {
-				header("Location:insertdata.php");
-			}
+		 
+	if (mysqli_query($conn,$sql))
+	{
+	header("Location:insertdata.php");
+	}
 }
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Insertdata</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
 </head>
 <style>	
 		a{
@@ -31,11 +37,25 @@ if(isset($_POST['submit']))
 			display:inline-block;
         padding:17px;
 		}
+		.btnSubmit{
+		border: 2px solid white;
+  outline: 0;
+  display : inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  font-size: 18px;
+	}
 		</style>
 <body>
 	<center>
 <div class="firbody">
-	<h1>Insert books data</h1>
+	<h1 style="text-align:center;color:#087D72;">Insert books data</h1>
+	<button class="btnSubmit" onclick="history.back()">Back</button><br><br>
+
 	<table width="450px;">
 <form name="frmImage" enctype="multipart/form-data" action=""
         method="post">
@@ -58,7 +78,7 @@ if(isset($_POST['submit']))
 	</table>
 <br>
 <br>
-<input type="submit" id="sub" value="Submit" name="submit" class="btnSubmit"  />
+<div class="buttons"><input type="submit" id="sub" value="Submit" name="submit" class="btnSubmit"  /></div>
 </form>
 </div>
 

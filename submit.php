@@ -12,7 +12,11 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/material.css">
         <link rel="icon" href="images/icon1.png" >
-
+        <style>
+        body{
+        background-repeat:repeat;
+        }
+        </style>
     </head>
     <body id="_5">
         <!-- navigation bar -->
@@ -25,6 +29,8 @@
            <?php
                 if(! isset($_SESSION['user'])){
             ?>
+              	    <a href="direct.php"><li id="home">Request</li></a>
+
             <a href="login.php"><li  id="home">Log In</li></a>
             <a href="signup.php"><li>Sign Up</li></a>
             <?php
@@ -43,9 +49,8 @@
            
             <form action="upload.php" method="post" enctype="multipart/form-data">
                 <center>
-                <h2 style="color:black;">Choose the Document</h2><br>
+                <h2 style="color:black;">Select the Document </h2><br>
                     
-                            <!--<div class="buttons"><a href=""><input name="submit" type="button" value="Upload Documents" class="up-in"></a></div>-->      
                <div class="modal-block">
                 <div class="button-block">                            
                     <div class="buttons"><input href="#pop1" class="modal-button" type="button" value="Renewal" id="renewal" ></div>
@@ -73,9 +78,7 @@
                    <input type="file" name="image1" id="file">
                    <input type="submit" value="Upload File" name="submit"><br><br>
                    </p>
-                   <center>
-                   <div class="buttons" ><input type="button" value="Proceed to submit docs" id="proceed" class="up-in"></div>
-                  </center>
+                   
                    </div>
                </div>
                <div class="bg-modal" id="pop2">
@@ -87,14 +90,11 @@
                    <br>
                    </center>
                    <p style="color:black;">
-                   1. Reason for application.<br>
+                   <br>
                    
-                   2. Submit the previous Semester MEMO copy.<br><br>
+                   1. Submit the previous Semester MEMO copy.<br><br>
                    <input type="file" name="image2" id="file">
                    <input type="submit" value="Upload File" name="submit"><br><br>
-
-                   
-                   3. After Submitting documents pay 500/-.
                    <br><br>
                    </p>
                    <center>

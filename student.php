@@ -67,6 +67,11 @@
         <link type="text/css" rel="stylesheet" href="fonts/font.css">
         <link rel="icon" href="images/icon1.png" >
     </head>
+    <style>
+    body{
+        background-repeat:repeat;
+    }
+    </style>
     <body id="_5">
         <!-- navigation bar -->
         
@@ -84,6 +89,8 @@
                 }
                 else{
             ?>
+              	    <a href="direct.php"><li id="home">Request</li></a>
+
             <a href="profile.php"><li>Hi, <?php echo $_SESSION["user"]; ?></li></a>
             <a href="logout.php"><li>Log Out</li></a>
             <?php

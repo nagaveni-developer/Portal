@@ -109,9 +109,9 @@ require_once 'mailer/class.phpmailer.php';
             $mail->AddAddress($email);
             $mail->Username   ="vasaviportal@gmail.com";
             $mail->Password   ="VCEportal";
-            $mail->SetFrom('vasaviportal@gmail.com','VCE Discussion forums team');
-            $mail->AddReplyTo('vasaviportal@gmail.com','VCE Discussions forum team');
-            $mail->Subject    = "VCE Forum Account verification";
+            $mail->SetFrom('vasaviportal@gmail.com','VCE Portal');
+            $mail->AddReplyTo('vasaviportal@gmail.com','VCE Portal');
+            $mail->Subject    = "VCE Portal Account verification";
             $mail->Body    = $username." your OTP is : ".$rand;
             //$mail->AltBody    = $txt;
 

@@ -3,9 +3,9 @@
 function alert($msg) {
   echo "<script type='text/javascript'>alert('$msg');</script>";
   }
-if(isset($_POST["submit"]))
+if(isset($_GET["doc_req"]))
 {
-
+$doc_req = $_GET["doc_req"];
 require_once 'mailer/class.phpmailer.php';
 $mail = new PHPMailer(true);
   
@@ -23,8 +23,8 @@ try
           $mail->AddAddress($email);
 $mail->Username="vasaviportal@gmail.com";
 $mail->Password   ="VCEportal";
-                                     $mail->SetFrom('vasaviportal@gmail.com','VCE Adminstrative branch');
-                                     $mail->AddReplyTo('vasaviportal@gmail.com','VCE Adminstrative branch');
+                                     $mail->SetFrom('vasaviportal@gmail.com','Examination Branch');
+                                     $mail->AddReplyTo('vasaviportal@gmail.com','Examination Branch');
 
  $mail->Subject = "VCE Adminstrative branch ";
  $mail->Body    = "Hello Admin! There is a request from a student,  please visit the website to check the student application form ";
@@ -75,8 +75,9 @@ echo "\nusername : ".$user;
                 $date = $row['join_date'];
             }
 
-            
-$query="insert into data(name,rollno,branch,year,mail)values('$name','$user','$branch',$year,'$email')";
+            $doc_req = $_GET["doc_req"];
+            echo $doc_req;
+$query="insert into data(name,rollno,branch,year,mail,doc_req)values('$name','$user','$branch',$year,'$email','$doc_req')";
      
  if(mysqli_query( $conn, $query))
 {

@@ -3,7 +3,9 @@
     session_start();
     include("connect.php");
     if(! isset($_SESSION['user']))
-        header("Location: login.php");
+        header("Location: index.php");
+        $query="select * from book";
+        $res=mysqli_query($conn,$query);
 ?>
 
 <!DOCTYPE html>
@@ -15,59 +17,6 @@
         <link type="text/css" rel="stylesheet" href="css/material.css">
         <link rel="icon" href="images/icon1.png" >
     </head>
-    <!---
-    <style>
-        .column {
-  float: left;
-  width: 50%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-        .fixedBox{
-    max-width: 500px;
-    margin: 50px auto;
-    box-sizing: border-box;
-    border: 1px solid none;
-    padding: 30px 20px;
-}
-.search{
-    position: relative;
-}
-.searchBox {
-	display: block;
-	padding: 5px 30px;
-	font-size: 17px;
-	width: 100%;
-	border-radius: 5px;
-	border: 1px solid #ddd;
-}
-.pre {
-	position: absolute;
-	bottom: 7px;
-	left: 0;
-	padding-left: 8px;
-}
-.pre img{
-    width: 12px;
-    vertical-align: middle;
-}
-.after {
-	position: absolute;
-	bottom: 7px;
-	right: 0;
-	padding-right: 8px;
-}
-.after img{
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 10px;
-}
-        </style>-->
     <body id="_5">
         <!-- navigation bar -->
         
@@ -95,20 +44,8 @@
         <!-- content -->
         <div id="content">
 
-        <form action="student_mail.php" method="post">
+        <form action="req_payment.php" method="get">
             <center>
-               <!-- <div class="row">
-                    <div class="column">
-            <div class="fixedBox">
-            <form action="#">
-            <div class="search">
-                <span class="pre"><img src="https://i.ibb.co/WWJ1q6f/search-v1.png" alt=""></span>
-                <input type="search" class="searchBox">
-                <span class="after"><img src="https://i.ibb.co/fXD1GsL/keyboard.png" alt="" title="Input Tool"></span>
-            </div>
-            </form>
-            </div></div>
-               <div class="column">-->
                             <h2 style="color:black;">Choose the Document</h2><br>
                  
                         <div class="modal-block">   
@@ -138,7 +75,11 @@
                    <br>
                    </p>
                    <center>
-                   <div class="buttons" ><input type="submit" value="Proceed to Pay" name="submit" class="up-in"></div>
+                   <div class="buttons" style="height:10px; width=4px;"><button type="button" 
+                        id="allotment"
+                        data-doc_req="allotment"
+                        onClick="requesta(this.id)">
+                        Proceed to Pay</button></div>
                   </center>
                    </div>
                </div>
@@ -151,15 +92,17 @@
                    <br>
                    </center>
                    <p style="color:black;">
-                   1. Reason for application.<br><br>
-                   2. Click proceed.<br>
+                
+                   1. Click proceed.<br>
                    
                    <br><br>
                    </p>
                    <center>
-                   
-
-                   <div class="buttons" ><input type="submit" value="submit" name="submit" class="up-in"></div>
+                   <div class="buttons"><button type="button" 
+                        id="bonofied"
+                        data-doc_req="bonofied"
+                        onClick="requestb(this.id)">
+                        Proceed</button></div>
                   </center>
                    </div>
                </div>
@@ -176,6 +119,20 @@
         </div>
 
         <!-- Sripts -->
+<script src="js/jquery-1.11.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	function requesta(buttonID){
+		var button=document.getElementById(buttonID);
+        var doc_req = button.getAttribute("data-doc_req");
+		window.location.href = 'req_payment.php?doc_req=' + doc_req; 
+    }
+    function requestb(buttonID){
+		var button=document.getElementById(buttonID);
+        var doc_req = button.getAttribute("data-doc_req");
+		window.location.href = 'student_mail.php?doc_req=' + doc_req; 
+	}
+	</script>
         <script>
          // Get the modal
 var modal = document.getElementsByClassName('bg-modal');

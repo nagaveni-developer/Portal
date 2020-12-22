@@ -3,8 +3,10 @@
 function alert($msg) {
   echo "<script type='text/javascript'>alert('$msg');</script>";
   }
+  if(! isset($_SESSION['user']))
+        header("Location: index.php");
   include('connect.php');
-if(isset($_GET["mail"])&&isset($_GET["flag"]))
+if(isset($_GET["mail"])&&isset($_GET["flag"])&&isset($_GET["doc_req"]))
 {
 require_once 'mailer/class.phpmailer.php';
 $mail = new PHPMailer(true);
@@ -23,11 +25,11 @@ try
           $mail->AddAddress($email);
 $mail->Username="vasaviportal@gmail.com";
 $mail->Password   ="VCEportal";
-                                     $mail->SetFrom('vasaviportal@gmail.com','Keerthi Priya');
-                                     $mail->AddReplyTo('vasaviportal@gmail.com','Keerthi Priya');
+                                     $mail->SetFrom('vasaviportal@gmail.com','Examination Branch');
+                                     $mail->AddReplyTo('vasaviportal@gmail.com','Examination Branch');
 
  $mail->Subject = "VCE Adminstrative branch ";
- $mail->Body    = "Hello! Your doucument has been approved,  please visit the website to check the status of ur application form ";
+ $mail->Body    = "Hello! Your document has been approved,  please visit the administrative branch to check the status of ur application form ";
        
 
   if($mail->Send())
@@ -119,7 +121,8 @@ button:hover, a:hover {
 </head>
 <body>    
  
-<h2 style="text-align:center;color:#087D72;">Student Document Requests</h2>
+<h2 style="text-align:center;color:#087D72;">Examination Branch : Student Document Requests</h2>
+<a href="library_admin.php"><button type="button" style="width:auto;">Library Admin</button></a>
 <div class="log">
 <a href="logout.php"><button type="button">logout</button> </a>
 <br>
@@ -147,14 +150,13 @@ include("connect.php");
         {
 
                 $roll = $row['rollno'];
-            //    $file= $row['file'];
                 $year= $row['year'];
                 $branch=$row['branch'];
                 $name = $row['name'];
                 $doc= $row['doc_req'];
                 $date = $row['date'];
-$mail=$row['mail'];
-$flag=$row['flag'];
+                $mail=$row['mail'];
+                $flag=$row['flag'];
 ?>
                 <div class="card">
           <form id="<?php echo $mail; ?>"  action="<?php echo htmlspecialchars( $_SERVER["PHP_SELF"] ); ?>" method="get" enctype="multipart/form-data">
@@ -167,10 +169,11 @@ echo"<br>*********<br>";
         echo "Doc required : ".$doc. "<br>";
        echo "Date : ".$date. "<br>";
       ?>
-      <button id="<?php echo $roll.$mail?>" 
+      <button id="<?php echo $doc.$roll.$mail?>" 
               type="button" data-mail="<?php echo $mail;?>"
               data-flag="<?php echo $flag;?>"
-              onClick="checkMail(this.id)">Submit</button>
+              data-doc_req="<?php echo $doc;?>"
+              onClick="checkMail(this.id)">Notify</button>
       <?php
        echo"<br>*********<br>";
           }          
@@ -191,9 +194,9 @@ else
 		var button=document.getElementById(buttonID);
     var mail = button.getAttribute("data-mail");
     var flag = button.getAttribute("data-flag");
-
+    var doc = button.getAttribute("data-doc_req");
     console.log(mail);
-		window.location.href = 'exam.php?mail=' + mail+'&flag='+flag; 
+		window.location.href = 'exam.php?mail=' + mail+'&flag='+flag+'&doc_req='+doc; 
   }
 
 	</script>

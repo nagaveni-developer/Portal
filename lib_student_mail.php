@@ -24,10 +24,10 @@ try
           $mail->AddAddress($email);
           $mail->Username="vasaviportal@gmail.com";
           $mail->Password   ="VCEportal";
-          $mail->SetFrom('vasaviportal@gmail.com','Library VCE Adminstrative branch');
-          $mail->AddReplyTo('vasaviportal@gmail.com','Library VCE Adminstrative branch');
+          $mail->SetFrom('vasaviportal@gmail.com','Library Adminstrative branch');
+          $mail->AddReplyTo('vasaviportal@gmail.com','Library Adminstrative branch');
 
- $mail->Subject = "VCE Adminstrative branch ";
+ $mail->Subject = "Library Adminstrative branch ";
  $mail->Body    = "Hello Admin! There is a BOOK request from a student,  please visit the website to view the student request ";
        
  echo $Book_id;
