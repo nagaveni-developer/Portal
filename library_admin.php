@@ -4,9 +4,6 @@ function alert($msg) {
   echo "<script type='text/javascript'>alert('$msg');</script>";
   }
 
-    include("connect.php");
-    if(! isset($_SESSION['user']))
-        header("Location: index.php");
   include('connect.php');
 if(isset($_GET["email"])&&isset($_GET["flag"]))
 {

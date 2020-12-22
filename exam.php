@@ -3,8 +3,7 @@
 function alert($msg) {
   echo "<script type='text/javascript'>alert('$msg');</script>";
   }
-  if(! isset($_SESSION['user']))
-        header("Location: index.php");
+ 
   include('connect.php');
 if(isset($_GET["mail"])&&isset($_GET["flag"])&&isset($_GET["doc_req"]))
 {

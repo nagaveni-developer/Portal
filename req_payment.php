@@ -14,14 +14,14 @@
   padding:0;
 }
 body{
-  height:100vh;
+  height:150vh;
   overflow:hidden;
   background:linear-gradient(-40deg,white,lightgrey);
   box-sizing:border-box;
   font-family: "Montserrat", sans-serif;
 }
 #wrapper{
- height:510px;
+ height:660px;
   width:700px;
   background:#fff;
   border:1px solid grey;
@@ -110,16 +110,21 @@ footer{
   align-items:center;
 }
 footer .btn{
+  margin:1px 1px 1px 1px;
+  border-radius:20px;
+  
+}
+.btn{
   margin:50px 15px 55px 15px;
   border-radius:20px;
   padding:.65em 1.6em;
 }
 footer :nth-child(1){
   background-color:#fff;
-  color:#f62f5e;
+ 
 }
 footer :nth-child(2){
-  background-color:#f62f5e;
+  
   color:#fff;
 }
 .col-xs-5.highlight{
@@ -182,15 +187,27 @@ input[type="text"], input[type="password"], input[type="email"] {
       <span class="small">* CVV or CVC is the card security code, unique three digits number on the back of your card seperate from its number.</span>
     </div><!--col-xs-6 end-->
   </div><!--row end-->
+  <div class="row">
+ <div id="myDIV" style="color:green;"></div>
+<button  onclick="myFunction()" class="btn" style="margin-top:0px;margin-left-55px;">Pay</buton>
+  
+  </div>
   <footer>
-    <button class="btn" onclick="history.back()">Back</button>
+    <button class="btn" style="width:124px; background-color :none;
+            margin-right :100px;
+            margin-left :40px;
+            height :40px;" onclick="history.back()">Back</button>
     <form action="student_mail.php" method="get">
     <button type="button" id="<?php echo $_GET['doc_req'];?>" 
             data-doc_req="<?php echo $_GET['doc_req'];?>"
-            onClick="request(this.id)">
+            onClick="request(this.id)" 
+            style="width:124px; background-color :none;
+            margin-right :100px;
+            margin-left :40px;
+            height :40px;">
             send request</button>
     </form>
-    <button class="btn" >Next Step</buton>
+    
   </footer>
 </div><!--wrapper end-->
 </body>
@@ -201,5 +218,14 @@ input[type="text"], input[type="password"], input[type="email"] {
 		window.location.href = 'student_mail.php?doc_req=' + doc_req; 
 	}
 	</script>
-        <script>
+  <script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "") {
+    x.innerHTML = "Your Payment is successful";
+  } else {
+    x.innerHTML = "";
+  }
+}
+</script>
 </html>
