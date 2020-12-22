@@ -67,13 +67,13 @@ if (isset($_GET['bookID']) && isset($_GET['userreq']) && isset($_GET['bookTitle'
 <!-- Pre-filled Book Search Form based on search-->
 	<form class="form-horizontal" action="lib_student_mail.php" method="get">
     <center>
-            <label for="userreq">User Name</label>
+           
                 <input type="text" id="userreq" name="userreq" placeholder="Enter username"
                   value="<?php echo $userreq?>">
-            <label for="bookID">Book ID</label>
+            
                 <input type="text" id="bookID" name="bookID" placeholder="Book ID"
                   value="<?php echo $bookID?>">
-            <label for="userreq">Book Title</label>
+           
                 <input type="text" id="bookTitle" name="bookTitle" placeholder="Enter Book Title"
                   value="<?php echo $bookTitle?>">
             
